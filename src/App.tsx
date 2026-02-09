@@ -65,7 +65,7 @@ function FadeIn({
 }
 
 function Countdown() {
-  const targetDate = new Date('2026-03-02T23:59:00').getTime()
+  const targetDate = new Date('2026-02-28T23:59:00').getTime()
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -177,25 +177,29 @@ function App() {
   const heroCards = [
     {
       title: 'Termin',
-      desc: '1 lutego - 2 marca 2026',
+      desc: '1 lutego \u2013 28 lutego 2026',
+      sub: 'Masz czas do ko\u0144ca lutego na przes\u0142anie danych za rok 2025. Uwaga: system zamyka si\u0119 o p\u00F3\u0142nocy ostatniego dnia miesi\u0105ca.',
       img: '/images/hero-termin.jpg',
       fallback: 'https://placehold.co/600x400/1e3a4a/ffffff/png?text=Termin',
     },
     {
       title: 'Dokumenty',
-      desc: 'NIE, NRUA, CRU i dane wynajmow',
+      desc: 'NIE, NRUA, CRU i dane najemc\u00F3w',
+      sub: 'Przygotuj sw\u00F3j numer identyfikacyjny, numer rejestracyjny nieruchomo\u015Bci (NRUA), kod rejestrowy (CRU) oraz anonimowan\u0105 list\u0119 wszystkich pobyt\u00F3w.',
       img: '/images/hero-dokumenty.jpg',
       fallback: 'https://placehold.co/600x400/1e3a4a/ffffff/png?text=Dokumenty',
     },
     {
       title: 'Proces',
-      desc: 'Aplikacja N2 i Registro de la Propiedad',
+      desc: 'Format XBRL i Sede Electr\u00F3nica',
+      sub: 'Deklaracja musi zosta\u0107 wys\u0142ana w oficjalnym formacie cyfrowym XBRL do hiszpa\u0144skiego Rejestru Nieruchomo\u015Bci (Registro de la Propiedad).',
       img: '/images/hero-proces.jpg',
       fallback: 'https://placehold.co/600x400/1e3a4a/ffffff/png?text=Proces',
     },
     {
       title: 'Konsekwencje',
-      desc: 'Cofniecie NRUA i blokada na platformach',
+      desc: 'Zawieszenie numeru i blokada ofert',
+      sub: 'Brak zg\u0142oszenia lub b\u0142\u0119dy w danych skutkuj\u0105 natychmiastowym wycofaniem numeru NRUA i usuni\u0119ciem og\u0142osze\u0144 z Airbnb oraz Booking.com w ci\u0105gu 48h.',
       img: '/images/hero-konsekwencje.jpg',
       fallback: 'https://placehold.co/600x400/1e3a4a/ffffff/png?text=Konsekwencje',
     },
@@ -339,19 +343,20 @@ function App() {
       <section id="hero" className="relative bg-brand pt-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 sm:pt-24 pb-12">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight animate-fade-in">
-            Obowiazkowe roczne<br />zgloszenie najmu<br />w Hiszpanii<span className="animate-blink">_</span>
+            Obowi\u0105zkowe roczne<br />zg\u0142oszenie najmu<br />w Hiszpanii<span className="animate-blink">_</span>
           </h1>
         </div>
         <div className="absolute top-24 right-8 w-24 h-24 dot-grid hidden lg:block" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-16 pt-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {heroCards.map((card) => (
-              <a key={card.title} href="#co-to" className="relative group rounded-lg overflow-hidden aspect-square sm:aspect-auto sm:h-56">
+              <a key={card.title} href="#co-to" className="relative group rounded-lg overflow-hidden aspect-square sm:aspect-auto sm:h-64">
                 <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onError={(e) => { (e.target as HTMLImageElement).src = card.fallback }} />
                 <div className="hero-card-overlay absolute inset-0" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
                   <h3 className="text-white text-lg sm:text-xl font-bold mb-1">{card.title}</h3>
-                  <p className="text-white/70 text-xs sm:text-sm">{card.desc}</p>
+                  <p className="text-white/80 text-sm font-medium mb-1">{card.desc}</p>
+                  {card.sub && <p className="text-white/60 text-xs leading-snug hidden sm:block">{card.sub}</p>}
                 </div>
               </a>
             ))}
@@ -480,7 +485,7 @@ function App() {
           <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
               <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight">Termin: 1 lutego - 2 marca 2026</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight">Termin: 1 lutego – 28 lutego 2026</h2>
                 <p className="text-white/70 text-lg leading-relaxed mb-8">
                   To sa daty nieprzekraczalne. Nie ma przedluzenia ani okresu karencji. Aplikacja N2 i Rejestr przyjmuja zgloszenia tylko w tym okresie. Przygotuj dokumenty juz teraz.
                 </p>
