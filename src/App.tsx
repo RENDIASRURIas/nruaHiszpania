@@ -169,7 +169,7 @@ function App() {
 
   const navItems = [
     { label: 'Co to NRUA?', href: '#co-to' },
-    { label: 'Jak zlozyc?', href: '#jak-zlozyc' },
+    { label: 'Jak złożyć?', href: '#jak-zlozyc' },
     { label: 'FAQ', href: '#faq' },
     { label: 'Kontakt', href: '#kontakt' },
   ]
@@ -207,92 +207,92 @@ function App() {
 
   const faqCategories: FAQCategory[] = [
     {
-      title: 'Obowiazek i Terminy',
+      title: 'Obowiązek i Terminy',
       icon: <Calendar className="w-5 h-5" />,
       items: [
-        { q: 'Jaki jest dokladny termin zlozenia zgloszenia?', a: 'Od 1 lutego do 2 marca 2026 wlacznie. To sa daty nieprzekraczalne ustalone przez Real Decreto 1312/2024.' },
-        { q: 'Co jesli zloze 3 marca (dzien po terminie)?', a: 'Rejestr rozpocznie procedure cofniecia NRUA. Nie ma przedluzenia ani "okresu karencji". System jest automatyczny.' },
-        { q: 'Czy moge zlozyc wczesniej, np. w styczniu?', a: 'Nie. Aplikacja N2 i Rejestr przyjmuja zgloszenia tylko w lutym (do 2 marca).' },
-        { q: 'Czy to jest obowiazek jednorazowy czy powtarzajacy sie?', a: 'Powtarzajacy sie co roku. Kazdego lutego musisz zglosic wynajmy z poprzedniego roku.' },
-        { q: 'Czy sa jakies wyjatki od tego obowiazku?', a: 'Nie. Kazdy z NRUA musi zglosic, nawet jesli nie wynajmowal (wtedy "sin actividad" - brak aktywnosci).' },
-        { q: 'Czy gmina moze przedluzyc termin?', a: 'Nie. To obowiazek panstwowy (Real Decreto), gminy nie maja wplywu na terminy.' },
-        { q: 'Otrzymam powiadomienie email ze musze zglosic?', a: 'Prawdopodobnie NIE. Rejestr nie wysyla przypomnien. To Twoj obowiazek sledzic termin.' },
-        { q: 'Co jesli jestem chory w lutym?', a: 'Mozesz upowaznie pelnomocnika (gestoria, rodzina) do zlozenia za Ciebie. Wymaga to pisemnego pelnomocnictwa.' },
-        { q: 'Czy musze zglosic jesli mieszkanie bylo puste caly 2025?', a: 'TAK. Musisz zglosic zaznaczajac "sin actividad" (brak wynajmu). To potwierdza ze NRUA jest aktywny.' },
-        { q: 'Czy moge poprosic o odroczenie terminu?', a: 'Nie. Termin jest sztywny dla wszystkich. Jedynym wyjsciem jest zlozenie w wymaganym okresie lub udzielenie pelnomocnictwa.' },
+        { q: 'Jaki jest dokładny termin złożenia zgłoszenia?', a: 'Od 1 lutego do 28 lutego 2026 włącznie. To są daty nieprzekraczalne ustalone przez Real Decreto 1312/2024.' },
+        { q: 'Co jeśli złożę 1 marca (dzień po terminie)?', a: 'Rejestr rozpocznie procedurę cofnięcia NRUA. Nie ma przedłużenia ani "okresu karencji". System jest automatyczny.' },
+        { q: 'Czy mogę złożyć wcześniej, np. w styczniu?', a: 'Nie. Aplikacja N2 i Rejestr przyjmują zgłoszenia tylko w lutym.' },
+        { q: 'Czy to jest obowiązek jednorazowy czy powtarzający się?', a: 'Powtarzający się co roku. Każdego lutego musisz zgłosić wynajmy z poprzedniego roku.' },
+        { q: 'Czy są jakieś wyjątki od tego obowiązku?', a: 'Nie. Każdy z NRUA musi zgłosić, nawet jeśli nie wynajmował (wtedy "sin actividad" - brak aktywności).' },
+        { q: 'Czy gmina może przedłużyć termin?', a: 'Nie. To obowiązek państwowy (Real Decreto), gminy nie mają wpływu na terminy.' },
+        { q: 'Otrzymam powiadomienie email że muszę zgłosić?', a: 'Prawdopodobnie NIE. Rejestr nie wysyła przypomnień. To Twój obowiązek śledzić termin.' },
+        { q: 'Co jeśli jestem chory w lutym?', a: 'Możesz upoważnić pełnomocnika (gestoría, rodzina) do złożenia za Ciebie. Wymaga to pisemnego pełnomocnictwa.' },
+        { q: 'Czy muszę zgłosić jeśli mieszkanie było puste cały 2025?', a: 'TAK. Musisz zgłosić zaznaczając "sin actividad" (brak wynajmu). To potwierdza że NRUA jest aktywny.' },
+        { q: 'Czy mogę poprosić o odroczenie terminu?', a: 'Nie. Termin jest sztywny dla wszystkich. Jedynym wyjściem jest złożenie w wymaganym okresie lub udzielenie pełnomocnictwa.' },
       ],
     },
     {
       title: 'Dokumenty i Dane',
       icon: <FileText className="w-5 h-5" />,
       items: [
-        { q: 'Nie pamietam swojego numeru NRUA. Gdzie go znalezc?', a: 'Sprawdz: dokument od Urzedu Gminy, ogloszenie na Airbnb/Booking (musi byc tam widoczny), lub zapytaj w Urzedzie Gminy gdzie rejestrowales.' },
-        { q: 'Co to jest CRU i gdzie go znalezc?', a: 'CRU (Codigo Registral Unico) to kod nieruchomosci w Rejestrze Wlasnosci. Znajdziesz w: dokumencie NRUA, escritura (akt notarialny) lub nota simple (wypis z Rejestru).' },
-        { q: 'Nie mam certyfikatu cyfrowego. Czy moge zlozyc?', a: 'TAK. Mozesz zlozyc osobiscie w Rejestrze Wlasnosci lub zlecic profesjonaliscie ktory posiada certyfikat.' },
-        { q: 'Czy potrzebuje kopii umow najmu?', a: 'Nie. Wystarczaja: daty, liczba gosci, cel najmu. Umowy zachowaj dla siebie (na wypadek kontroli).' },
-        { q: 'Wynajowalem 20 razy w 2025. Musze kazdy wypisac?', a: 'TAK, ale aplikacja N2 pozwala zgrupowac. Wpisz date pierwszego i ostatniego wynajmu w roku oraz laczna liczbe gosci.' },
-        { q: 'Nie pamietam dokladnych dat wynajmow. Co robic?', a: 'Sprawdz: wyciagi bankowe (wplaty od Airbnb/Booking), kalendarz Airbnb (zakladka "Rezerwacje"), panel Booking (Historia), emaile potwierdzajace rezerwacje.' },
-        { q: 'Czy musze podac dane gosci (imiona, nazwiska)?', a: 'NIE. Zgloszenie jest anonimowe. Podajesz tylko: liczbe osob, daty, cel.' },
-        { q: 'Mam nieruchomosc w spolce (SL). Jakie dane podac?', a: 'NIF spolki, nazwa spolki, administrator lub osoba upowazniona, email kontaktowy spolki.' },
-        { q: 'Czy moge zglosic kilka nieruchomosci jednym formularzem?', a: 'Nie. Kazdy CRU (nieruchomosc) wymaga osobnego zgloszenia.' },
-        { q: 'Stracilem dokument z NRUA. Moge uzyskac duplikat?', a: 'TAK. Zwroc sie do Urzedu Gminy ktory wydal NRUA. Popros o "certificado duplicado NRUA".' },
+        { q: 'Nie pamiętam swojego numeru NRUA. Gdzie go znaleźć?', a: 'Sprawdź: dokument od Urzędu Gminy, ogłoszenie na Airbnb/Booking (musi być tam widoczny), lub zapytaj w Urzędzie Gminy gdzie rejestrowałeś.' },
+        { q: 'Co to jest CRU i gdzie go znaleźć?', a: 'CRU (Código Registral Único) to kod nieruchomości w Rejestrze Własności. Znajdziesz w: dokumencie NRUA, escritura (akt notarialny) lub nota simple (wypis z Rejestru).' },
+        { q: 'Nie mam certyfikatu cyfrowego. Czy mogę złożyć?', a: 'TAK. Możesz złożyć osobiście w Rejestrze Własności lub zlecić profesjonaliście który posiada certyfikat.' },
+        { q: 'Czy potrzebuję kopii umów najmu?', a: 'Nie. Wystarczają: daty, liczba gości, cel najmu. Umowy zachowaj dla siebie (na wypadek kontroli).' },
+        { q: 'Wynajmowałem 20 razy w 2025. Muszę każdy wypisać?', a: 'TAK, ale aplikacja N2 pozwala zgrupować. Wpisz datę pierwszego i ostatniego wynajmu w roku oraz łączną liczbę gości.' },
+        { q: 'Nie pamiętam dokładnych dat wynajmów. Co robić?', a: 'Sprawdź: wyciągi bankowe (wpłaty od Airbnb/Booking), kalendarz Airbnb (zakładka "Rezerwacje"), panel Booking (Historia), emaile potwierdzające rezerwacje.' },
+        { q: 'Czy muszę podać dane gości (imiona, nazwiska)?', a: 'NIE. Zgłoszenie jest anonimowe. Podajesz tylko: liczbę osób, daty, cel.' },
+        { q: 'Mam nieruchomość w spółce (SL). Jakie dane podać?', a: 'NIF spółki, nazwa spółki, administrator lub osoba upoważniona, email kontaktowy spółki.' },
+        { q: 'Czy mogę zgłosić kilka nieruchomości jednym formularzem?', a: 'Nie. Każdy CRU (nieruchomość) wymaga osobnego zgłoszenia.' },
+        { q: 'Straciłem dokument z NRUA. Mogę uzyskać duplikat?', a: 'TAK. Zwróć się do Urzędu Gminy który wydał NRUA. Poproś o "certificado duplicado NRUA".' },
       ],
     },
     {
       title: 'Proces i Aplikacja N2',
       icon: <BookOpen className="w-5 h-5" />,
       items: [
-        { q: 'Czy aplikacja N2 jest w jezyku polskim?', a: 'Nie. Jest po hiszpansku i angielsku. Dlatego przygotowalismy manual w jezyku polskim.' },
-        { q: 'Aplikacja N2 nie chce sie zainstalowac. Co robic?', a: 'Sprawdz: czy masz Jave zainstalowana (java.com), pobierz ponownie z oficjalnej strony, lub sprubuj na innym komputerze. Napisz do nas - pomozemy.' },
-        { q: 'Czy moge wypelnic formularz na telefonie?', a: 'Nie. Aplikacja N2 dziala tylko na komputerze (Windows/Mac). Nie ma wersji mobilnej.' },
-        { q: 'Ile czasu zajmuje wypelnienie formularza?', a: 'Z przygotowanymi danymi: 20-30 minut. Bez przygotowania: 1-2 godziny (szukanie dat, liczenie gosci).' },
-        { q: 'Czy moge zapisac formularz i wrocic pozniej?', a: 'TAK. Aplikacja N2 pozwala zapisac rozpracowywany formularz i dokonczyc pozniej.' },
-        { q: 'Popelnilem blad w zgloszeniu. Czy moge poprawic?', a: 'TAK, ale tylko jesli jeszcze nie wyslales. Po wyslaniu musisz zlozyc "rectificacion" (poprawke).' },
-        { q: 'Jak wyglada potwierdzenie odbioru?', a: 'PDF z: numerem rejestrowym zgloszenia, data i godzina zlozenia, pieczecia elektroniczna Rejestru, Twoje dane i NRUA.' },
-        { q: 'Ile czeka sie na potwierdzenie?', a: 'Elektroniczne: 24-48 godzin. Osobiste: natychmiast (pieczec na dokumencie).' },
-        { q: 'Rejestr odrzucil moje zgloszenie. Co robic?', a: 'Sprawdz powod odrzucenia (powinien byc w emailu). Najczestsze: bledny CRU, NRUA niezgodny z baza, brakujace dane. Popraw i zloz ponownie.' },
-        { q: 'Czy moge zlozyc zgloszenie za kogos (rodzina, znajomy)?', a: 'TAK, jesli masz pisemne pelnomocnictwo od wlasciciela.' },
+        { q: 'Czy aplikacja N2 jest w języku polskim?', a: 'Nie. Jest po hiszpańsku i angielsku. Dlatego przygotowaliśmy manual w języku polskim.' },
+        { q: 'Aplikacja N2 nie chce się zainstalować. Co robić?', a: 'Sprawdź: czy masz Javę zainstalowaną (java.com), pobierz ponownie z oficjalnej strony, lub spróbuj na innym komputerze. Napisz do nas - pomożemy.' },
+        { q: 'Czy mogę wypełnić formularz na telefonie?', a: 'Nie. Aplikacja N2 działa tylko na komputerze (Windows/Mac). Nie ma wersji mobilnej.' },
+        { q: 'Ile czasu zajmuje wypełnienie formularza?', a: 'Z przygotowanymi danymi: 20-30 minut. Bez przygotowania: 1-2 godziny (szukanie dat, liczenie gości).' },
+        { q: 'Czy mogę zapisać formularz i wrócić później?', a: 'TAK. Aplikacja N2 pozwala zapisać rozpracowywany formularz i dokończyć później.' },
+        { q: 'Popełniłem błąd w zgłoszeniu. Czy mogę poprawić?', a: 'TAK, ale tylko jeśli jeszcze nie wysłałeś. Po wysłaniu musisz złożyć "rectificación" (poprawkę).' },
+        { q: 'Jak wygląda potwierdzenie odbioru?', a: 'PDF z: numerem rejestrowym zgłoszenia, data i godzina złożenia, pieczęć elektroniczna Rejestru, Twoje dane i NRUA.' },
+        { q: 'Ile czeka się na potwierdzenie?', a: 'Elektroniczne: 24-48 godzin. Osobiste: natychmiast (pieczęć na dokumencie).' },
+        { q: 'Rejestr odrzucił moje zgłoszenie. Co robić?', a: 'Sprawdź powód odrzucenia (powinien być w emailu). Najczęstsze: błędny CRU, NRUA niezgodny z bazą, brakujące dane. Popraw i złóż ponownie.' },
+        { q: 'Czy mogę złożyć zgłoszenie za kogoś (rodzina, znajomy)?', a: 'TAK, jeśli masz pisemne pełnomocnictwo od właściciela.' },
       ],
     },
     {
       title: 'Konsekwencje i Kary',
       icon: <AlertTriangle className="w-5 h-5" />,
       items: [
-        { q: 'Co DOKLADNIE sie stanie jesli nie zloze?', a: 'Rejestr Wlasnosci cofnie NRUA (automatycznie), informacja trafi do Ventanilla Unica Digital, Airbnb/Booking zablokuja Twoje ogloszenie, nie bedziesz mogl legalnie wynajmowac, mozliwe kary gminne (300-3000\u20AC).' },
-        { q: 'Czy bede mogl odzyskac NRUA po cofnieciu?', a: 'TAK, ale musisz przejsc caly proces od nowa (jak przy pierwszej rejestracji). To kosztuje czas i pieniadze.' },
-        { q: 'Airbnb juz mi zablokowal ogloszenie. Co robic?', a: 'Zloz zgloszenie NATYCHMIAST, uzyskaj potwierdzenie, wyslij do Airbnb jako dowod. Czekaj na odblokowanie (moze zajac 7-14 dni).' },
-        { q: 'Czy Urzad Skarbowy tez zostanie poinformowany?', a: 'Nie bezposrednio. To sa dwa niezalezne systemy. Ale Hacienda moze uzyskac dostep do danych.' },
-        { q: 'Czy moge dostac kare pieniezna oprocz cofniecia NRUA?', a: 'TAK. Gminy moga nalozyc kary za: brak zgloszenia (300-1500\u20AC), wynajmowanie bez NRUA (1000-3000\u20AC), powtarzajace sie naruszenie (do 6000\u20AC).' },
-        { q: 'Czy kara jest taka sama w calej Hiszpanii?', a: 'Nie. Kazda Wspolnota Autonomiczna ma swoje stawki. Najsurowsze: Katalonia, Baleary.' },
-        { q: 'Jak dlugo trwa cofniecie NRUA?', a: 'Po terminie 2 marca Rejestr ma 30 dni na wyslanie ostrzezenia. Potem kolejne 15 dni na cofniecie. Razem ok. 45-60 dni.' },
-        { q: 'Otrzymam ostrzezenie przed cofnieciem?', a: 'Prawdopodobnie TAK, ale nie zawsze. Rejestr powinien wyslac "requerimiento" (wezwanie), ale terminy sa krotkie.' },
-        { q: 'Czy moge odwolac sie od cofniecia NRUA?', a: 'TAK, ale tylko jesli masz uzasadniony powod (np. blad Rejestru, sila wyzsza). Termin: 15 dni od powiadomienia.' },
-        { q: 'Czy ktos juz stracil NRUA za brak zgloszenia?', a: 'To pierwszy rok tego obowiazku (2026), wiec przypadkow jeszcze nie ma. Ale prawo jest jasne - bedzie egzekwowane.' },
+        { q: 'Co DOKŁADNIE się stanie jeśli nie złożę?', a: 'Rejestr Własności cofnie NRUA (automatycznie), informacja trafi do Ventanilla Única Digital, Airbnb/Booking zablokują Twoje ogłoszenie, nie będziesz mógł legalnie wynajmować, możliwe kary gminne (300-3000\u20AC).' },
+        { q: 'Czy będę mógł odzyskać NRUA po cofnięciu?', a: 'TAK, ale musisz przejść cały proces od nowa (jak przy pierwszej rejestracji). To kosztuje czas i pieniądze.' },
+        { q: 'Airbnb już mi zablokował ogłoszenie. Co robić?', a: 'Złóż zgłoszenie NATYCHMIAST, uzyskaj potwierdzenie, wyślij do Airbnb jako dowód. Czekaj na odblokowanie (może zająć 7-14 dni).' },
+        { q: 'Czy Urząd Skarbowy też zostanie poinformowany?', a: 'Nie bezpośrednio. To są dwa niezależne systemy. Ale Hacienda może uzyskać dostęp do danych.' },
+        { q: 'Czy mogę dostać karę pieniężną oprócz cofnięcia NRUA?', a: 'TAK. Gminy mogą nałożyć kary za: brak zgłoszenia (300-1500\u20AC), wynajmowanie bez NRUA (1000-3000\u20AC), powtarzające się naruszenie (do 6000\u20AC).' },
+        { q: 'Czy kara jest taka sama w całej Hiszpanii?', a: 'Nie. Każda Wspólnota Autonomiczna ma swoje stawki. Najsurowsze: Katalonia, Baleary.' },
+        { q: 'Jak długo trwa cofnięcie NRUA?', a: 'Po terminie 28 lutego Rejestr ma 30 dni na wysłanie ostrzeżenia. Potem kolejne 15 dni na cofnięcie. Razem ok. 45-60 dni.' },
+        { q: 'Otrzymam ostrzeżenie przed cofnięciem?', a: 'Prawdopodobnie TAK, ale nie zawsze. Rejestr powinien wysłać "requerimiento" (wezwanie), ale terminy są krótkie.' },
+        { q: 'Czy mogę odwołać się od cofnięcia NRUA?', a: 'TAK, ale tylko jeśli masz uzasadniony powód (np. błąd Rejestru, siła wyższa). Termin: 15 dni od powiadomienia.' },
+        { q: 'Czy ktoś już stracił NRUA za brak zgłoszenia?', a: 'To pierwszy rok tego obowiązku (2026), więc przypadków jeszcze nie ma. Ale prawo jest jasne - będzie egzekwowane.' },
       ],
     },
     {
-      title: 'Przypadki Szczegolne',
+      title: 'Przypadki Szczególne',
       icon: <Users className="w-5 h-5" />,
       items: [
-        { q: 'Sprzedalem mieszkanie w lipcu 2025. Kto zglasza?', a: 'TY: wynajmy styczen-lipiec 2025. NOWY WLASCICIEL: wynajmy sierpien-grudzien 2025. Kazdy za swoj okres.' },
-        { q: 'Kupilem mieszkanie z NRUA. Przechodzi na mnie?', a: 'TAK. NRUA jest zwiazany z nieruchomoscia. Ale musisz zaktualizowac dane wlasciciela w Urzedzie Gminy.' },
-        { q: 'Wynajmuje mieszkanie mojej matki. Kto zglasza?', a: 'Wlasciciel (matka) lub osoba z pelnomocnictwem. Potrzebne: dokument pelnomocnictwa notarialny.' },
+        { q: 'Sprzedałem mieszkanie w lipcu 2025. Kto zgłasza?', a: 'TY: wynajmy styczeń-lipiec 2025. NOWY WŁAŚCICIEL: wynajmy sierpień-grudzień 2025. Każdy za swój okres.' },
+        { q: 'Kupiłem mieszkanie z NRUA. Przechodzi na mnie?', a: 'TAK. NRUA jest związany z nieruchomością. Ale musisz zaktualizować dane właściciela w Urzędzie Gminy.' },
+        { q: 'Wynajmuję mieszkanie mojej matki. Kto zgłasza?', a: 'Właściciel (matka) lub osoba z pełnomocnictwem. Potrzebne: dokument pełnomocnictwa notarialny.' },
         { q: 'Mam wspolwlascicieli (50/50). Kto zglasza?', a: 'Jeden ze wspolwlascicieli w imieniu wszystkich. Lub kazdy osobno (ale wtedy duplikacja - lepiej jeden).' },
         { q: 'NRUA jest na spolke, ale ja wynajmuje prywatnie. Co robic?', a: 'NRUA musi byc zgodny z wlascicielem w Rejestrze. Jesli spolka jest wlascicielem - zglasza spolka.' },
         { q: 'Mam kilka NRUA dla jednego mieszkania (rozne pokoje). Ile zgloszen?', a: 'Jesli wszystkie NRUA maja ten sam CRU - jedno zgloszenie (lista wszystkich NRUA w jednym formularzu).' },
         { q: 'Czy gestoria moze to zrobic za mnie?', a: 'TAK. Wiekszosc gestorias oferuje te usluge. Mozesz tez skontaktowac sie z nami.' },
         { q: 'Wynajmuje przez Airbnb. Oni nie zglaszaja za mnie?', a: 'NIE. Airbnb/Booking tylko udostepniaja platforme. Obowiazek prawny lezy po stronie wlasciciela.' },
         { q: 'Jestem rezydentem podatkowym w Polsce. Czy to dotyczy mnie?', a: 'TAK. Obowiazek dotyczy wszystkich wlascicieli z NRUA, niezaleznie od rezydencji podatkowej.' },
-        { q: 'Gdzie moge uzyskac pomoc jesli mam problem?', a: 'Nasz email: kontakt@nruahiszpania.pl (odpowiadamy w 24h). Mozesz tez zwrocic sie do Rejestru Wlasnosci lub Urzedu Gminy ktory wydal NRUA.' },
+        { q: 'Gdzie mogę uzyskać pomoc jeśli mam problem?', a: 'Nasz email: kontakt@nruahiszpania.pl (odpowiadamy w 24h). Możesz też zwrócić się do Rejestru Własności lub Urzędu Gminy który wydał NRUA.' },
       ],
     },
   ]
 
   const steps = [
-    { num: '01', title: 'Zbierz Dokumenty i Dane', desc: 'Przygotuj: NIE/NIF, numer NRUA, kod CRU, dane wszystkich wynajmow z 2025 roku (daty, liczba gosci, cel najmu).', icon: <FileText className="w-7 h-7" /> },
+    { num: '01', title: 'Zbierz Dokumenty i Dane', desc: 'Przygotuj: NIE/NIF, numer NRUA, kod CRU, dane wszystkich wynajmów z 2025 roku (daty, liczba gości, cel najmu).', icon: <FileText className="w-7 h-7" /> },
     { num: '02', title: 'Pobierz Aplikacje N2', desc: 'Oficjalny program Colegio de Registradores. Pobierz ze strony sede.registradores.org. Wymaga: Windows 10+ lub macOS, Java 8+.', icon: <BookOpen className="w-7 h-7" /> },
-    { num: '03', title: 'Wypelnij Formularz', desc: 'Uruchom aplikacje N2, wybierz "Nuevo deposito", rok 2025, wpisz dane wlasciciela, dane nieruchomosci (CRU, NRUA), informacje o wynajmach.', icon: <CheckCircle2 className="w-7 h-7" /> },
-    { num: '04', title: 'Zloz Elektronicznie lub Osobiscie', desc: 'Elektronicznie: z certyfikatem cyfrowym na sede.registradores.org. Osobiscie: wydrukuj formularz i zanes do Registro de la Propiedad.', icon: <Shield className="w-7 h-7" /> },
+    { num: '03', title: 'Wypełnij Formularz', desc: 'Uruchom aplikację N2, wybierz "Nuevo depósito", rok 2025, wpisz dane właściciela, dane nieruchomości (CRU, NRUA), informacje o wynajmach.', icon: <CheckCircle2 className="w-7 h-7" /> },
+    { num: '04', title: 'Złóż Elektronicznie lub Osobiście', desc: 'Elektronicznie: z certyfikatem cyfrowym na sede.registradores.org. Osobiście: wydrukuj formularz i zanieś do Registro de la Propiedad.', icon: <Shield className="w-7 h-7" /> },
   ]
 
   return (
@@ -318,7 +318,7 @@ function App() {
             </div>
             <div className="flex items-center gap-4">
               <a href="#kontakt" className="hidden sm:inline-flex items-center px-5 py-2.5 bg-brand-accent text-white text-sm font-medium rounded-md hover:opacity-90 transition-opacity">
-                Skontaktuj sie
+                Skontaktuj się
               </a>
               <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-2 text-slate-700">
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -334,7 +334,7 @@ function App() {
               </a>
             ))}
             <a href="#kontakt" onClick={() => setMobileMenuOpen(false)} className="inline-flex items-center mt-3 px-5 py-2.5 bg-brand-accent text-white text-sm font-medium rounded-md">
-              Skontaktuj sie
+              Skontaktuj się
             </a>
           </div>
         </div>
@@ -368,12 +368,12 @@ function App() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <FadeIn>
             <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-brand leading-snug tracking-tight">
-              Od 2026 roku kazdy wlasciciel nieruchomosci z numerem NRUA musi co roku skladac roczne zgloszenie wynajmu do Registro de la Propiedad. Brak zgloszenia oznacza automatyczne cofniecie numeru rejestracyjnego.
+              Od 2026 roku każdy właściciel nieruchomości z numerem NRUA musi co roku składać roczne zgłoszenie wynajmu do Registro de la Propiedad. Brak zgłoszenia oznacza automatyczne cofnięcie numeru rejestracyjnego.
             </p>
           </FadeIn>
           <FadeIn delay={200}>
             <a href="#jak-zlozyc" className="inline-flex items-center mt-10 px-6 py-3 bg-brand-accent text-white text-sm font-medium rounded-md hover:opacity-90 transition-opacity">
-              Sprawdz jak zlozyc
+              Sprawdź jak złożyć
             </a>
           </FadeIn>
         </div>
@@ -393,10 +393,10 @@ function App() {
                 <div className="absolute top-6 right-6 w-3 h-3 rounded-full bg-brand-accent" />
                 <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Czym jest NRUA?</h3>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  NRUA (Numero de Registro Unico de Arrendamiento) to unikalny numer rejestracyjny przypisany do nieruchomosci przeznaczonej na wynajem krotkoterminowy w Hiszpanii.
+                  NRUA (Número de Registro Único de Arrendamiento) to unikalny numer rejestracyjny przypisany do nieruchomości przeznaczonej na wynajem krótkoterminowy w Hiszpanii.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  Obowiazek rocznego zgloszenia wynika z Real Decreto 1312/2024, ktory wszedl w zycie 23 grudnia 2024.
+                  Obowiązek rocznego zgłoszenia wynika z Real Decreto 1312/2024, który wszedł w życie 23 grudnia 2024.
                 </p>
               </div>
             </FadeIn>
@@ -405,10 +405,10 @@ function App() {
                 <div className="absolute top-6 right-6 w-3 h-3 rounded-full bg-brand-accent" />
                 <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Model Informacyjny</h3>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  Co roku w lutym musisz zlozyc formularz z danymi o wszystkich wynajmach z poprzedniego roku: daty, liczba gosci, cel najmu.
+                  Co roku w lutym musisz złożyć formularz z danymi o wszystkich wynajmach z poprzedniego roku: daty, liczba gości, cel najmu.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  Nawet jesli NIE wynajmowales - musisz zglosic &quot;brak aktywnosci&quot; (sin actividad). To potwierdza ze NRUA jest aktywny.
+                  Nawet jeśli NIE wynajmowałeś - musisz zgłosić &quot;brak aktywności&quot; (sin actividad). To potwierdza że NRUA jest aktywny.
                 </p>
               </div>
             </FadeIn>
@@ -427,7 +427,7 @@ function App() {
                   </li>
                   <li className="flex items-start gap-3">
                     <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                    Cos skomplikowanego - formularz zajmuje 20-30 minut
+                    Coś skomplikowanego - formularz zajmuje 20-30 minut
                   </li>
                 </ul>
               </div>
@@ -435,11 +435,11 @@ function App() {
             <FadeIn delay={400}>
               <div className="bg-slate-50 rounded-lg p-8 sm:p-10 h-full relative group hover:bg-slate-100 transition-colors">
                 <div className="absolute top-6 right-6 w-3 h-3 rounded-full bg-brand-accent" />
-                <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Kto musi zglosic?</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Kto musi zgłosić?</h3>
                 <ul className="space-y-3 text-slate-600">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                    Masz nieruchomosc w Hiszpanii
+                    Masz nieruchomość w Hiszpanii
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
@@ -447,7 +447,7 @@ function App() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                    Wynajem krotkoterminowy (turystyczny, wakacyjny, tymczasowy)
+                    Wynajem krótkoterminowy (turystyczny, wakacyjny, tymczasowy)
                   </li>
                 </ul>
               </div>
@@ -461,20 +461,20 @@ function App() {
           <div className="lg:grid lg:grid-cols-2 gap-16 items-start">
             <FadeIn>
               <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-8 tracking-tight">O obowiazku NRUA</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-8 tracking-tight">O obowiązku NRUA</h2>
                 <div className="space-y-5 text-lg text-slate-600 leading-relaxed">
-                  <p>Od 2026 roku kazdy wlasciciel z numerem NRUA musi co roku w lutym skladac Model Informacyjny z lista wszystkich wynajmow z poprzedniego roku.</p>
+                  <p>Od 2026 roku każdy właściciel z numerem NRUA musi co roku w lutym składać Model Informacyjny z listą wszystkich wynajmów z poprzedniego roku.</p>
                   <p>
-                    Jest to obowiazek administracyjny wynikajacy z Real Decreto 1312/2024. Dotyczy to wszystkich wlascicieli nieruchomosci wynajmowanych krotkoterminowo, niezaleznie od{' '}
+                    Jest to obowiązek administracyjny wynikający z Real Decreto 1312/2024. Dotyczy to wszystkich właścicieli nieruchomości wynajmowanych krótkoterminowo, niezależnie od{' '}
                     <a href="#faq" className="underline text-brand hover:text-brand-light">rezydencji podatkowej</a>,{' '}
-                    <a href="#faq" className="underline text-brand hover:text-brand-light">wspolnoty autonomicznej</a> czy{' '}
-                    <a href="#faq" className="underline text-brand hover:text-brand-light">platformy wynajmu</a>. Nawet jesli nie wynajmowales - musisz to zglosic.
+                    <a href="#faq" className="underline text-brand hover:text-brand-light">wspólnoty autonomicznej</a> czy{' '}
+                    <a href="#faq" className="underline text-brand hover:text-brand-light">platformy wynajmu</a>. Nawet jeśli nie wynajmowałeś - musisz to zgłosić.
                   </p>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
-              <img src="/images/about-spain.jpg" alt="Nieruchomosci w Hiszpanii" className="rounded-lg w-full h-auto object-cover mt-8 lg:mt-0" onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/800x500/1e3a4a/ffffff/png?text=Hiszpania' }} />
+              <img src="/images/about-spain.jpg" alt="Nieruchomości w Hiszpanii" className="rounded-lg w-full h-auto object-cover mt-8 lg:mt-0" onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/800x500/1e3a4a/ffffff/png?text=Hiszpania' }} />
             </FadeIn>
           </div>
         </div>
@@ -487,16 +487,16 @@ function App() {
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight">Termin: 1 lutego – 28 lutego 2026</h2>
                 <p className="text-white/70 text-lg leading-relaxed mb-8">
-                  To sa daty nieprzekraczalne. Nie ma przedluzenia ani okresu karencji. Aplikacja N2 i Rejestr przyjmuja zgloszenia tylko w tym okresie. Przygotuj dokumenty juz teraz.
+                  To są daty nieprzekraczalne. Nie ma przedłużenia ani okresu karencji. Aplikacja N2 i Rejestr przyjmują zgłoszenia tylko w tym okresie. Przygotuj dokumenty już teraz.
                 </p>
                 <a href="#jak-zlozyc" className="inline-flex items-center px-6 py-3 bg-white text-brand text-sm font-medium rounded-md hover:bg-slate-100 transition-colors">
-                  Jak zlozyc zgloszenie
+                  Jak złożyć zgłoszenie
                 </a>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
               <div className="mt-12 lg:mt-0">
-                <p className="text-white/50 text-sm font-medium tracking-wider uppercase mb-4">Do konca terminu pozostalo</p>
+                <p className="text-white/50 text-sm font-medium tracking-wider uppercase mb-4">Do końca terminu pozostało</p>
                 <Countdown />
               </div>
             </FadeIn>
@@ -509,7 +509,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="absolute top-0 right-0 w-20 h-20 dot-grid hidden lg:block" />
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand mb-16 tracking-tight">Jak zlozyc zgloszenie</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand mb-16 tracking-tight">Jak złożyć zgłoszenie</h2>
           </FadeIn>
           <div className="grid sm:grid-cols-2 gap-4">
             {steps.map((step, i) => (
@@ -526,7 +526,7 @@ function App() {
           <FadeIn delay={500}>
             <div className="text-center mt-12">
               <a href="#faq" className="inline-flex items-center px-6 py-3 bg-brand-accent text-white text-sm font-medium rounded-md hover:opacity-90 transition-opacity">
-                Masz pytania? Sprawdz FAQ
+                Masz pytania? Sprawdź FAQ
               </a>
             </div>
           </FadeIn>
@@ -537,11 +537,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="absolute bottom-0 left-0 w-20 h-20 dot-grid hidden lg:block" />
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-12 tracking-tight">Dlaczego to wazne</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-12 tracking-tight">Dlaczego to ważne</h2>
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: <AlertTriangle className="w-6 h-6" />, title: 'Automatyczne cofniecie NRUA' },
+              { icon: <AlertTriangle className="w-6 h-6" />, title: 'Automatyczne cofnięcie NRUA' },
               { icon: <XCircle className="w-6 h-6" />, title: 'Blokada na Airbnb i Booking' },
               { icon: <Scale className="w-6 h-6" />, title: 'Kary gminne 300-6000\u20AC' },
               { icon: <Clock className="w-6 h-6" />, title: 'Termin nieprzekraczalny' },
@@ -562,16 +562,16 @@ function App() {
       <section className="bg-brand relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 sm:py-28">
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 tracking-tight">Wazne ostrzezenia</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 tracking-tight">Ważne ostrzeżenia</h2>
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'Airbnb i Booking BEDA blokowac ogloszenia bez aktualnego zgloszenia NRUA.',
-              'Nie ma znaczenia, czy wynajmowales przez platforme, czy prywatnie - obowiazek dotyczy WSZYSTKICH.',
-              'Nawet jesli Twoje mieszkanie stalo puste caly rok, MUSISZ zglosic "brak aktywnosci".',
-              'Zlozenie po terminie NIE gwarantuje unikniecia konsekwencji.',
-              'Kazda nieruchomosc (CRU) wymaga OSOBNEGO zgloszenia.',
-              'Gestoria lub pelnomocnik moga zlozyc zgloszenie za Ciebie - nie musisz jechac do Hiszpanii.',
+              'Airbnb i Booking BĘDĄ blokować ogłoszenia bez aktualnego zgłoszenia NRUA.',
+              'Nie ma znaczenia, czy wynajmowałeś przez platformę, czy prywatnie - obowiązek dotyczy WSZYSTKICH.',
+              'Nawet jesli Twoje mieszkanie stalo puste caly rok, MUSISZ zglosic "brak aktywności".',
+              'Złożenie po terminie NIE gwarantuje uniknięcia konsekwencji.',
+              'Każda nieruchomość (CRU) wymaga OSOBNEGO zgłoszenia.',
+              'Gestoría lub pełnomocnik mogą złożyć zgłoszenie za Ciebie - nie musisz jechać do Hiszpanii.',
             ].map((warning, i) => (
               <FadeIn key={i} delay={i * 80}>
                 <div className="flex items-start gap-3">
@@ -588,8 +588,8 @@ function App() {
       <section id="faq" className="py-24 sm:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand mb-4 tracking-tight">Najczesciej zadawane pytania</h2>
-            <p className="text-lg text-slate-500 mb-12 max-w-2xl">50 pytan i odpowiedzi dotyczacych obowiazku NRUA, pogrupowanych tematycznie.</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand mb-4 tracking-tight">Najczęściej zadawane pytania</h2>
+            <p className="text-lg text-slate-500 mb-12 max-w-2xl">50 pytań i odpowiedzi dotyczących obowiązku NRUA, pogrupowanych tematycznie.</p>
           </FadeIn>
           <FadeIn delay={100}>
             <div className="flex flex-wrap gap-2 mb-12">
@@ -613,16 +613,16 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="absolute top-0 left-0 w-20 h-20 dot-grid hidden lg:block" />
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-12 tracking-tight">Przypadki szczegolne</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-12 tracking-tight">Przypadki szczególne</h2>
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { title: 'Sprzedaz mieszkania w trakcie roku', desc: 'Sprzedawca zglasza wynajmy do momentu sprzedazy, nowy wlasciciel - od momentu zakupu.', icon: <Building2 className="w-6 h-6" /> },
-              { title: 'Nieruchomosc nalezaca do spolki (SL)', desc: 'Zglasza spolka z certyfikatem cyfrowym. Dane: NIF spolki, nazwa, administrator.', icon: <Users className="w-6 h-6" /> },
-              { title: 'Wspolwlasnosc (kilku wlascicieli)', desc: 'Jeden ze wspolwlascicieli sklada w imieniu wszystkich. Lepiej nie duplikowac zgloszen.', icon: <Users className="w-6 h-6" /> },
-              { title: 'Pelnomocnictwo (gestoria)', desc: 'Gestoria lub rodzina moga zlozyc za Ciebie z pisemnym pelnomocnictwem.', icon: <FileText className="w-6 h-6" /> },
-              { title: 'Kilka NRUA (rozne pokoje)', desc: 'Jesli wszystkie NRUA maja ten sam CRU - jedno zgloszenie z lista wszystkich numerow.', icon: <Building2 className="w-6 h-6" /> },
-              { title: 'Rezydent podatkowy w Polsce', desc: 'Obowiazek dotyczy WSZYSTKICH wlascicieli z NRUA, niezaleznie od rezydencji.', icon: <Scale className="w-6 h-6" /> },
+              { title: 'Sprzedaż mieszkania w trakcie roku', desc: 'Sprzedawca zgłasza wynajmy do momentu sprzedaży, nowy właściciel - od momentu zakupu.', icon: <Building2 className="w-6 h-6" /> },
+              { title: 'Nieruchomość należąca do spółki (SL)', desc: 'Zgłasza spółka z certyfikatem cyfrowym. Dane: NIF spółki, nazwa, administrator.', icon: <Users className="w-6 h-6" /> },
+              { title: 'Współwłasność (kilku właścicieli)', desc: 'Jeden ze współwłaścicieli składa w imieniu wszystkich. Lepiej nie duplikować zgłoszeń.', icon: <Users className="w-6 h-6" /> },
+              { title: 'Pełnomocnictwo (gestoría)', desc: 'Gestoría lub rodzina mogą złożyć za Ciebie z pisemnym pełnomocnictwem.', icon: <FileText className="w-6 h-6" /> },
+              { title: 'Kilka NRUA (różne pokoje)', desc: 'Jeśli wszystkie NRUA mają ten sam CRU - jedno zgłoszenie z listą wszystkich numerów.', icon: <Building2 className="w-6 h-6" /> },
+              { title: 'Rezydent podatkowy w Polsce', desc: 'Obowiązek dotyczy WSZYSTKICH właścicieli z NRUA, niezależnie od rezydencji.', icon: <Scale className="w-6 h-6" /> },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 80}>
                 <div className="bg-slate-50 rounded-lg p-6 sm:p-8 h-full hover:bg-slate-100 transition-colors">
@@ -643,10 +643,10 @@ function App() {
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: 'Sede Registradores', desc: 'Skladanie elektroniczne', url: 'https://sede.registradores.org' },
-              { title: 'Real Decreto 1312/2024', desc: 'Pelny tekst ustawy (BOE)', url: 'https://www.boe.es' },
+              { title: 'Sede Registradores', desc: 'Składanie elektroniczne', url: 'https://sede.registradores.org' },
+              { title: 'Real Decreto 1312/2024', desc: 'Pełny tekst ustawy (BOE)', url: 'https://www.boe.es' },
               { title: 'Aplikacja N2', desc: 'Pobierz oficjalny program', url: 'https://sede.registradores.org' },
-              { title: 'Java (wymagana)', desc: 'Pobierz Jave do aplikacji N2', url: 'https://java.com' },
+              { title: 'Java (wymagana)', desc: 'Pobierz Javę do aplikacji N2', url: 'https://java.com' },
             ].map((link, i) => (
               <FadeIn key={i} delay={i * 80}>
                 <a href={link.url} target="_blank" rel="noopener noreferrer" className="block bg-slate-50 rounded-lg p-6 hover:bg-slate-100 transition-colors group">
@@ -667,7 +667,7 @@ function App() {
               <div>
                 <p className="text-brand-accent text-sm font-medium tracking-wider uppercase mb-3">Kontakt</p>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand mb-6 tracking-tight">Potrzebujesz pomocy? Napisz do nas.</h2>
-                <p className="text-lg text-slate-500 leading-relaxed mb-10">Pomagamy polskim wlascicielom nieruchomosci w Hiszpanii z obowiazkami NRUA. Odpowiadamy w ciagu 24 godzin.</p>
+                <p className="text-lg text-slate-500 leading-relaxed mb-10">Pomagamy polskim właścicielom nieruchomości w Hiszpanii z obowiązkami NRUA. Odpowiadamy w ciągu 24 godzin.</p>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
@@ -693,7 +693,7 @@ function App() {
                   <div>
                     <p className="font-bold text-brand">Lokalizacja</p>
                     <p className="text-slate-600">Hiszpania</p>
-                    <p className="text-slate-400 text-sm">Obslugujemy cala Hiszpanie</p>
+                    <p className="text-slate-400 text-sm">Obsługujemy całą Hiszpanię</p>
                   </div>
                 </div>
               </div>
@@ -706,7 +706,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 sm:py-20">
           <div className="mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
-              Informacje o NRUA<br />dla polskich wlascicieli
+              Informacje o NRUA<br />dla polskich właścicieli
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -728,7 +728,7 @@ function App() {
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-medium mb-4 text-sm tracking-wider uppercase">Linki zewnetrzne</h4>
+              <h4 className="text-white font-medium mb-4 text-sm tracking-wider uppercase">Linki zewnętrzne</h4>
               <ul className="space-y-3">
                 <li><a href="https://sede.registradores.org" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">Sede Registradores</a></li>
                 <li><a href="https://www.boe.es" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">BOE (Real Decreto)</a></li>
