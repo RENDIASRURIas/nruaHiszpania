@@ -177,29 +177,29 @@ function App() {
   const heroCards = [
     {
       title: 'Termin',
-      desc: '1 lutego \u2013 28 lutego 2026',
-      sub: 'Masz czas do ko\u0144ca lutego na przes\u0142anie danych za rok 2025. Uwaga: system zamyka si\u0119 o p\u00F3\u0142nocy ostatniego dnia miesi\u0105ca.',
+      desc: '1 lutego – 28 lutego 2026',
+      sub: 'Masz czas do końca lutego na przesłanie danych za rok 2025. Uwaga: system zamyka się o północy ostatniego dnia miesiąca.',
       img: '/images/hero-termin.jpg',
       fallback: 'https://placehold.co/600x400/1e3a4a/ffffff/png?text=Termin',
     },
     {
       title: 'Dokumenty',
-      desc: 'NIE, NRUA, CRU i dane najemc\u00F3w',
-      sub: 'Przygotuj sw\u00F3j numer identyfikacyjny, numer rejestracyjny nieruchomo\u015Bci (NRUA), kod rejestrowy (CRU) oraz anonimowan\u0105 list\u0119 wszystkich pobyt\u00F3w.',
+      desc: 'NIE, NRUA, CRU i dane najemców',
+      sub: 'Przygotuj swój numer identyfikacyjny, numer rejestracyjny nieruchomości (NRUA), kod rejestrowy (CRU) oraz anonimowaną listę wszystkich pobytów.',
       img: '/images/hero-dokumenty.jpg',
       fallback: 'https://placehold.co/600x400/1e3a4a/ffffff/png?text=Dokumenty',
     },
     {
       title: 'Proces',
-      desc: 'Format XBRL i Sede Electr\u00F3nica',
-      sub: 'Deklaracja musi zosta\u0107 wys\u0142ana w oficjalnym formacie cyfrowym XBRL do hiszpa\u0144skiego Rejestru Nieruchomo\u015Bci (Registro de la Propiedad).',
+      desc: 'Format XBRL i Sede Electrónica',
+      sub: 'Deklaracja musi zostać wysłana w oficjalnym formacie cyfrowym XBRL do hiszpańskiego Rejestru Nieruchomości (Registro de la Propiedad).',
       img: '/images/hero-proces.jpg',
       fallback: 'https://placehold.co/600x400/1e3a4a/ffffff/png?text=Proces',
     },
     {
       title: 'Konsekwencje',
       desc: 'Zawieszenie numeru i blokada ofert',
-      sub: 'Brak zg\u0142oszenia lub b\u0142\u0119dy w danych skutkuj\u0105 natychmiastowym wycofaniem numeru NRUA i usuni\u0119ciem og\u0142osze\u0144 z Airbnb oraz Booking.com w ci\u0105gu 48h.',
+      sub: 'Brak zgłoszenia lub błędy w danych skutkują natychmiastowym wycofaniem numeru NRUA i usunięciem ogłoszeń z Airbnb oraz Booking.com w ciągu 48h.',
       img: '/images/hero-konsekwencje.jpg',
       fallback: 'https://placehold.co/600x400/1e3a4a/ffffff/png?text=Konsekwencje',
     },
@@ -258,11 +258,11 @@ function App() {
       title: 'Konsekwencje i Kary',
       icon: <AlertTriangle className="w-5 h-5" />,
       items: [
-        { q: 'Co DOKŁADNIE się stanie jeśli nie złożę?', a: 'Rejestr Własności cofnie NRUA (automatycznie), informacja trafi do Ventanilla Única Digital, Airbnb/Booking zablokują Twoje ogłoszenie, nie będziesz mógł legalnie wynajmować, możliwe kary gminne (300-3000\u20AC).' },
+        { q: 'Co DOKŁADNIE się stanie jeśli nie złożę?', a: 'Rejestr Własności cofnie NRUA (automatycznie), informacja trafi do Ventanilla Única Digital, Airbnb/Booking zablokują Twoje ogłoszenie, nie będziesz mógł legalnie wynajmować, możliwe kary gminne (300-3000€).' },
         { q: 'Czy będę mógł odzyskać NRUA po cofnięciu?', a: 'TAK, ale musisz przejść cały proces od nowa (jak przy pierwszej rejestracji). To kosztuje czas i pieniądze.' },
         { q: 'Airbnb już mi zablokował ogłoszenie. Co robić?', a: 'Złóż zgłoszenie NATYCHMIAST, uzyskaj potwierdzenie, wyślij do Airbnb jako dowód. Czekaj na odblokowanie (może zająć 7-14 dni).' },
         { q: 'Czy Urząd Skarbowy też zostanie poinformowany?', a: 'Nie bezpośrednio. To są dwa niezależne systemy. Ale Hacienda może uzyskać dostęp do danych.' },
-        { q: 'Czy mogę dostać karę pieniężną oprócz cofnięcia NRUA?', a: 'TAK. Gminy mogą nałożyć kary za: brak zgłoszenia (300-1500\u20AC), wynajmowanie bez NRUA (1000-3000\u20AC), powtarzające się naruszenie (do 6000\u20AC).' },
+        { q: 'Czy mogę dostać karę pieniężną oprócz cofnięcia NRUA?', a: 'TAK. Gminy mogą nałożyć kary za: brak zgłoszenia (300-1500€), wynajmowanie bez NRUA (1000-3000€), powtarzające się naruszenie (do 6000€).' },
         { q: 'Czy kara jest taka sama w całej Hiszpanii?', a: 'Nie. Każda Wspólnota Autonomiczna ma swoje stawki. Najsurowsze: Katalonia, Baleary.' },
         { q: 'Jak długo trwa cofnięcie NRUA?', a: 'Po terminie 28 lutego Rejestr ma 30 dni na wysłanie ostrzeżenia. Potem kolejne 15 dni na cofnięcie. Razem ok. 45-60 dni.' },
         { q: 'Otrzymam ostrzeżenie przed cofnięciem?', a: 'Prawdopodobnie TAK, ale nie zawsze. Rejestr powinien wysłać "requerimiento" (wezwanie), ale terminy są krótkie.' },
@@ -343,7 +343,7 @@ function App() {
       <section id="hero" className="relative bg-brand pt-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 sm:pt-24 pb-12">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight animate-fade-in">
-            Obowi\u0105zkowe roczne<br />zg\u0142oszenie najmu<br />w Hiszpanii<span className="animate-blink">_</span>
+            Obowiązkowe roczne<br />zgłoszenie najmu<br />w Hiszpanii<span className="animate-blink">_</span>
           </h1>
         </div>
         <div className="absolute top-24 right-8 w-24 h-24 dot-grid hidden lg:block" />
@@ -543,7 +543,7 @@ function App() {
             {[
               { icon: <AlertTriangle className="w-6 h-6" />, title: 'Automatyczne cofnięcie NRUA' },
               { icon: <XCircle className="w-6 h-6" />, title: 'Blokada na Airbnb i Booking' },
-              { icon: <Scale className="w-6 h-6" />, title: 'Kary gminne 300-6000\u20AC' },
+              { icon: <Scale className="w-6 h-6" />, title: 'Kary gminne 300-6000€' },
               { icon: <Clock className="w-6 h-6" />, title: 'Termin nieprzekraczalny' },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 100}>
