@@ -277,12 +277,12 @@ function App() {
         { q: 'Sprzedałem mieszkanie w lipcu 2025. Kto zgłasza?', a: 'TY: wynajmy styczeń-lipiec 2025. NOWY WŁAŚCICIEL: wynajmy sierpień-grudzień 2025. Każdy za swój okres.' },
         { q: 'Kupiłem mieszkanie z NRUA. Przechodzi na mnie?', a: 'TAK. NRUA jest związany z nieruchomością. Ale musisz zaktualizować dane właściciela w Urzędzie Gminy.' },
         { q: 'Wynajmuję mieszkanie mojej matki. Kto zgłasza?', a: 'Właściciel (matka) lub osoba z pełnomocnictwem. Potrzebne: dokument pełnomocnictwa notarialny.' },
-        { q: 'Mam wspolwlascicieli (50/50). Kto zglasza?', a: 'Jeden ze wspolwlascicieli w imieniu wszystkich. Lub kazdy osobno (ale wtedy duplikacja - lepiej jeden).' },
-        { q: 'NRUA jest na spolke, ale ja wynajmuje prywatnie. Co robic?', a: 'NRUA musi byc zgodny z wlascicielem w Rejestrze. Jesli spolka jest wlascicielem - zglasza spolka.' },
-        { q: 'Mam kilka NRUA dla jednego mieszkania (rozne pokoje). Ile zgloszen?', a: 'Jesli wszystkie NRUA maja ten sam CRU - jedno zgloszenie (lista wszystkich NRUA w jednym formularzu).' },
-        { q: 'Czy gestoria moze to zrobic za mnie?', a: 'TAK. Wiekszosc gestorias oferuje te usluge. Mozesz tez skontaktowac sie z nami.' },
-        { q: 'Wynajmuje przez Airbnb. Oni nie zglaszaja za mnie?', a: 'NIE. Airbnb/Booking tylko udostepniaja platforme. Obowiazek prawny lezy po stronie wlasciciela.' },
-        { q: 'Jestem rezydentem podatkowym w Polsce. Czy to dotyczy mnie?', a: 'TAK. Obowiazek dotyczy wszystkich wlascicieli z NRUA, niezaleznie od rezydencji podatkowej.' },
+        { q: 'Mam współwłaścicieli (50/50). Kto zgłasza?', a: 'Jeden ze współwłaścicieli w imieniu wszystkich. Lub każdy osobno (ale wtedy duplikacja - lepiej jeden).' },
+        { q: 'NRUA jest na spółkę, ale ja wynajmuję prywatnie. Co robić?', a: 'NRUA musi być zgodny z właścicielem w Rejestrze. Jeśli spółka jest właścicielem - zgłasza spółka.' },
+        { q: 'Mam kilka NRUA dla jednego mieszkania (różne pokoje). Ile zgłoszeń?', a: 'Jeśli wszystkie NRUA mają ten sam CRU - jedno zgłoszenie (lista wszystkich NRUA w jednym formularzu).' },
+        { q: 'Czy gestoría może to zrobić za mnie?', a: 'TAK. Większość gestorías oferuje tę usługę. Możesz też skontaktować się z nami.' },
+        { q: 'Wynajmuję przez Airbnb. Oni nie zgłaszają za mnie?', a: 'NIE. Airbnb/Booking tylko udostępniają platformę. Obowiązek prawny leży po stronie właściciela.' },
+        { q: 'Jestem rezydentem podatkowym w Polsce. Czy to dotyczy mnie?', a: 'TAK. Obowiązek dotyczy wszystkich właścicieli z NRUA, niezależnie od rezydencji podatkowej.' },
         { q: 'Gdzie mogę uzyskać pomoc jeśli mam problem?', a: 'Nasz email: kontakt@nruahiszpania.pl (odpowiadamy w 24h). Możesz też zwrócić się do Rejestru Własności lub Urzędu Gminy który wydał NRUA.' },
       ],
     },
@@ -568,7 +568,7 @@ function App() {
             {[
               'Airbnb i Booking BĘDĄ blokować ogłoszenia bez aktualnego zgłoszenia NRUA.',
               'Nie ma znaczenia, czy wynajmowałeś przez platformę, czy prywatnie - obowiązek dotyczy WSZYSTKICH.',
-              'Nawet jesli Twoje mieszkanie stalo puste caly rok, MUSISZ zglosic "brak aktywności".',
+              'Nawet jeśli Twoje mieszkanie stało puste cały rok, MUSISZ zgłosić "brak aktywności".',
               'Złożenie po terminie NIE gwarantuje uniknięcia konsekwencji.',
               'Każda nieruchomość (CRU) wymaga OSOBNEGO zgłoszenia.',
               'Gestoría lub pełnomocnik mogą złożyć zgłoszenie za Ciebie - nie musisz jechać do Hiszpanii.',
@@ -743,7 +743,7 @@ function App() {
               </svg>
               <span className="text-sm text-white/40">NRUA Hiszpania &copy; {new Date().getFullYear()}. Portal informacyjny.</span>
             </div>
-            <p className="text-xs text-white/30">Informacje na stronie nie stanowia porady prawnej. Skonsultuj sie z profesjonalista.</p>
+            <p className="text-xs text-white/30">Informacje na stronie nie stanowią porady prawnej. Skonsultuj się z profesjonalistą.</p>
           </div>
         </div>
       </footer>
