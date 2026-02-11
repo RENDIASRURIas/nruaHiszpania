@@ -342,7 +342,7 @@ function App() {
 
       <section id="hero" className="relative bg-brand pt-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 sm:pt-24 pb-12 text-center">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-brand-accent leading-tight tracking-tight animate-fade-in mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight animate-fade-in mb-6">
             Kto musi mieć numer NRUA?
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
