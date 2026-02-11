@@ -567,6 +567,30 @@ function App() {
             ))}
           </div>
           <FadeIn delay={500}>
+            <div className="grid sm:grid-cols-2 gap-6 mt-12">
+              <a href="/docs/instrukcja-n2.pdf" download className="flex items-center gap-5 bg-slate-50 rounded-lg p-6 hover:bg-slate-100 transition-all group border border-slate-200">
+                <div className="w-14 h-14 rounded-lg bg-brand flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <Download className="w-6 h-6" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-brand group-hover:text-brand-light transition-colors mb-1">Instrukcja instalacji i tworzenia depozytów czynszowych w aplikacji N2</h3>
+                  <p className="text-slate-400 text-sm">PDF — Instrukcja krok po kroku</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-brand-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a href="/docs/podrecznik-depozyt.pdf" download className="flex items-center gap-5 bg-slate-50 rounded-lg p-6 hover:bg-slate-100 transition-all group border border-slate-200">
+                <div className="w-14 h-14 rounded-lg bg-brand flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <Download className="w-6 h-6" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-brand group-hover:text-brand-light transition-colors mb-1">Podręcznik wprowadzający — Depozyt z tytułu najmu</h3>
+                  <p className="text-slate-400 text-sm">PDF — Przewodnik po depozycie</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-brand-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </FadeIn>
+          <FadeIn delay={600}>
             <div className="text-center mt-12">
               <a href="#faq" className="inline-flex items-center px-6 py-3 bg-brand-accent text-white text-sm font-medium rounded-md hover:opacity-90 transition-opacity">
                 Masz pytania? Sprawdź FAQ
