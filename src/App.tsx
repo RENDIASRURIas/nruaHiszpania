@@ -421,19 +421,20 @@ function App() {
             <FadeIn delay={300}>
               <div className="bg-slate-50 rounded-lg p-8 sm:p-10 h-full relative group hover:bg-slate-100 transition-colors">
                 <div className="absolute top-6 right-6 w-3 h-3 rounded-full bg-brand-accent" />
-                <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">To NIE jest</h3>
-                <ul className="space-y-3 text-slate-600">
+                <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Czym NIE JEST roczne zgłoszenie NRUA?</h3>
+                <p className="text-slate-600 leading-relaxed mb-4">Aby uniknąć pomyłek, pamiętaj, że to zgłoszenie:</p>
+                <ul className="space-y-4 text-slate-600">
                   <li className="flex items-start gap-3">
                     <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                    Kaucja dla najemcy (fianza)
+                    <span><strong>To NIE jest kaucja (fianza):</strong> Nie ma nic wspólnego z depozytem wpłacanym do lokalnych urzędów (jak AVRA czy IBAVI).</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                    Deklaracja podatkowa IRNR ani Modelo 210
+                    <span><strong>To NIE jest deklaracja podatkowa (IRNR / Modelo 210):</strong> To obowiązek informacyjny dla Rejestru Nieruchomości, a nie podatkowy dla Urzędu Skarbowego.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                    Coś skomplikowanego - formularz zajmuje 20-30 minut
+                    <span><strong>To NIE jest skomplikowane:</strong> Jeśli masz przygotowane daty wynajmu, wypełnienie formularza zajmuje średnio 20-30 minut.</span>
                   </li>
                 </ul>
               </div>
@@ -441,19 +442,20 @@ function App() {
             <FadeIn delay={400}>
               <div className="bg-slate-50 rounded-lg p-8 sm:p-10 h-full relative group hover:bg-slate-100 transition-colors">
                 <div className="absolute top-6 right-6 w-3 h-3 rounded-full bg-brand-accent" />
-                <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Kto musi zgłosić?</h3>
-                <ul className="space-y-3 text-slate-600">
+                <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Kto musi złożyć sprawozdanie?</h3>
+                <p className="text-slate-600 leading-relaxed mb-4">Obowiązek ten dotyczy Cię, jeśli spełniasz te trzy warunki:</p>
+                <ul className="space-y-4 text-slate-600">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                    Masz nieruchomość w Hiszpanii
+                    <span>Masz nieruchomość w Hiszpanii (mieszkanie, dom, a nawet łódź mieszkalną).</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                    Posiadasz numer NRUA (uzyskany w 2025)
+                    <span>Posiadasz numer NRUA (uzyskany w 2025 roku lub później).</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                    Wynajem krótkoterminowy (turystyczny, wakacyjny, tymczasowy)
+                    <span>Wynajmujesz krótkoterminowo: Twoja oferta pojawia się w internecie w celach turystycznych, wakacyjnych, zawodowych lub studenckich.</span>
                   </li>
                 </ul>
               </div>
