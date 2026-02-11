@@ -21,6 +21,10 @@ import {
   X,
   Check,
   Download,
+  ExternalLink,
+  Globe,
+  Youtube,
+  ArrowLeft,
 } from 'lucide-react'
 
 function useInView(threshold = 0.1) {
@@ -164,9 +168,318 @@ function FAQAccordion({ category }: { category: FAQCategory }) {
   )
 }
 
+type LegalPage = 'privacy' | 'terms' | 'cookies' | null
+
+function PrivacyPage({ onBack }: { onBack: () => void }) {
+  return (
+    <div className="min-h-screen bg-white font-sans antialiased">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+        <button onClick={onBack} className="inline-flex items-center gap-2 text-brand-accent hover:text-brand transition-colors mb-8 text-sm font-medium">
+          <ArrowLeft className="w-4 h-4" /> Wróć do strony głównej
+        </button>
+        <div className="flex items-center gap-3 mb-2">
+          <Shield className="w-8 h-8 text-brand" />
+          <h1 className="text-3xl sm:text-4xl font-bold text-brand">Política de Privacidad</h1>
+        </div>
+        <p className="text-slate-500 mb-10">Polityka Prywatności</p>
+        <div className="bg-slate-50 rounded-2xl p-8 sm:p-10 space-y-8 text-slate-700 leading-relaxed">
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">1. Responsable del Tratamiento de sus Datos Personales</h2>
+            <p className="mb-3">El responsable del tratamiento de los datos recabados a través de este sitio web es:</p>
+            <p><strong>Nombre o Razón Social:</strong> Polska Grupa Konsultingowa</p>
+            <p><strong>NIF/CIF:</strong> B22682827</p>
+            <p><strong>Domicilio Social:</strong> Calle Matilde Peñaranda, 27, 03183 Torrevieja (Alicante), España</p>
+            <p><strong>Correo Electrónico:</strong> <a href="mailto:info@pgkhiszpania.com" className="text-brand-accent hover:underline">info@pgkhiszpania.com</a></p>
+            <p><strong>Teléfono:</strong> 644 106 222</p>
+            <p><strong>Sitio Web:</strong> www.podatkihiszpania.com</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">2. Finalidad del Tratamiento de sus Datos Personales</h2>
+            <p className="mb-3">En Polska Grupa Konsultingowa tratamos la información que nos facilitan las personas interesadas con los siguientes fines:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Gestionar las solicitudes de información, consultas o cualquier tipo de petición que sea realizada por el usuario a través de cualquiera de las formas de contacto puestas a su disposición.</li>
+              <li>Envío de comunicaciones comerciales sobre nuestros productos y servicios, siempre que se haya obtenido el consentimiento expreso del usuario.</li>
+              <li>Realizar análisis estadísticos y estudios de mercado.</li>
+              <li>Gestionar la relación contractual o precontractual con nuestros clientes y proveedores.</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">3. Legitimación para el Tratamiento de sus Datos</h2>
+            <p>La base legal para el tratamiento de sus datos es el consentimiento del interesado, la ejecución de un contrato o precontrato, o el interés legítimo del responsable. En el caso de las comunicaciones comerciales, la base legal es el consentimiento que se le solicita.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">4. Conservación de sus Datos</h2>
+            <p>Los datos personales proporcionados se conservarán mientras se mantenga la relación con el usuario, no se solicite su supresión por el interesado, o durante los años necesarios para cumplir con las obligaciones legales.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">5. Destinatarios de sus Datos</h2>
+            <p>Sus datos no se cederán a terceros, salvo obligación legal. No obstante, para la prestación de determinados servicios, es posible que sus datos sean tratados por terceros que actúan como encargados del tratamiento, bajo las instrucciones de Polska Grupa Konsultingowa y con las garantías adecuadas.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">6. Derechos del Interesado</h2>
+            <p className="mb-3">Cualquier persona tiene derecho a obtener confirmación sobre si en Polska Grupa Konsultingowa estamos tratando datos personales que les conciernan, o no.</p>
+            <p>Las personas interesadas tienen derecho a <strong>acceder a sus datos personales</strong>, así como a solicitar la <strong>rectificación de los datos inexactos</strong> o, en su caso, solicitar su <strong>supresión</strong> cuando, entre otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos. En determinadas circunstancias, los interesados podrán solicitar la <strong>limitación del tratamiento</strong> de sus datos, <strong>oponerse al tratamiento</strong>, solicitar la <strong>portabilidad de sus datos</strong> y <strong>presentar una reclamación</strong> ante la Agencia Española de Protección de Datos (AEPD).</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">7. ¿Cómo puede ejercer sus Derechos?</h2>
+            <p>Puede ejercer sus derechos enviando un escrito a <strong>Polska Grupa Konsultingowa</strong>, a la dirección postal <strong>Calle Matilde Peñaranda, 27, 03183 Torrevieja (Alicante), España</strong>, o a la dirección de correo electrónico <a href="mailto:info@pgkhiszpania.com" className="text-brand-accent hover:underline">info@pgkhiszpania.com</a>, adjuntando fotocopia de su DNI o documento identificativo equivalente.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">8. Cambios en la Política de Privacidad</h2>
+            <p>Polska Grupa Konsultingowa se reserva el derecho a modificar la presente Política de Privacidad para adaptarla a novedades legislativas o jurisprudenciales, así como a prácticas de la industria.</p>
+            <p className="mt-4 text-sm text-slate-500">Última actualización: Enero 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function TermsPage({ onBack }: { onBack: () => void }) {
+  return (
+    <div className="min-h-screen bg-white font-sans antialiased">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+        <button onClick={onBack} className="inline-flex items-center gap-2 text-brand-accent hover:text-brand transition-colors mb-8 text-sm font-medium">
+          <ArrowLeft className="w-4 h-4" /> Wróć do strony głównej
+        </button>
+        <div className="flex items-center gap-3 mb-2">
+          <FileText className="w-8 h-8 text-brand" />
+          <h1 className="text-3xl sm:text-4xl font-bold text-brand">Nota Prawna</h1>
+        </div>
+        <p className="text-slate-500 mb-10">Aviso Legal - Condiciones de uso de la página web</p>
+        <div className="bg-slate-50 rounded-2xl p-8 sm:p-10 space-y-8 text-slate-700 leading-relaxed">
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">1. Datos Identificativos del Titular de la Web</h2>
+            <p><strong>Nombre o Razón Social:</strong> Polska Grupa Konsultingowa</p>
+            <p><strong>NIF/CIF:</strong> B22682827</p>
+            <p><strong>Domicilio Social:</strong> Calle Matilde Peñaranda, 27, 03183 Torrevieja (Alicante), España</p>
+            <p><strong>Correo Electrónico:</strong> <a href="mailto:info@pgkhiszpania.com" className="text-brand-accent hover:underline">info@pgkhiszpania.com</a></p>
+            <p><strong>Teléfono:</strong> 644 106 222</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">2. Objeto y Ámbito de la Web</h2>
+            <p>El presente Aviso Legal regula el acceso y el uso de la página web www.nruahiszpania.com, incluyendo los contenidos y servicios puestos a disposición de los usuarios en y/o a través de la misma.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">3. Condiciones de Acceso y Uso de la Web</h2>
+            <p>El acceso a la web atribuye la condición de usuario e implica la aceptación plena y sin reservas de todas y cada una de las condiciones incluidas en este Aviso Legal. El usuario se compromete a utilizar la web, sus servicios y contenidos de forma lícita, diligente, correcta y de conformidad con la ley, la moral y el orden público.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">4. Propiedad Intelectual e Industrial</h2>
+            <p>Todos los derechos de propiedad intelectual e industrial del contenido de esta página web son titularidad de <strong>Polska Grupa Konsultingowa</strong> o bien de sus licenciantes. Quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de Polska Grupa Konsultingowa.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">5. Exclusión de Garantías y Responsabilidad</h2>
+            <p>Polska Grupa Konsultingowa no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">6. Política de Privacidad y Protección de Datos</h2>
+            <p>La información sobre el tratamiento de datos personales se encuentra detallada en la Política de Privacidad de esta web.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">7. Política de Cookies</h2>
+            <p>Esta web utiliza cookies propias y de terceros para mejorar la experiencia de navegación y ofrecer contenidos de interés.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">8. Legislación Aplicable y Jurisdicción</h2>
+            <p>El presente Aviso Legal se rige en todos y cada uno de sus extremos por la legislación española. Para la resolución de cualquier controversia que pudiera surgir, las partes se someten a los Juzgados y Tribunales de Torrevieja (Alicante), salvo que la ley establezca lo contrario.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-brand mb-3">Información sobre RODO (GDPR)</h2>
+            <p className="mb-4">Reglamento General de Protección de Datos</p>
+            <h3 className="text-lg font-semibold text-brand mb-2">1. Introducción al RODO</h3>
+            <p className="mb-4">El Reglamento General de Protección de Datos (RGPD), conocido en Polonia como <strong>RODO</strong> (Rozporządzenie Ogólne o Ochronie Danych Osobowych), es una normativa de la Unión Europea que unifica la protección de datos para todos los individuos dentro de la UE.</p>
+            <h3 className="text-lg font-semibold text-brand mb-2">2. Responsable del Tratamiento</h3>
+            <p className="mb-1"><strong>Nombre o Razón Social:</strong> Polska Grupa Konsultingowa</p>
+            <p className="mb-1"><strong>NIF/CIF:</strong> B22682827</p>
+            <p className="mb-1"><strong>Domicilio Social:</strong> Calle Matilde Peñaranda, 27, 03183 Torrevieja (Alicante), España</p>
+            <p className="mb-1"><strong>Correo Electrónico:</strong> <a href="mailto:info@pgkhiszpania.com" className="text-brand-accent hover:underline">info@pgkhiszpania.com</a></p>
+            <p className="mb-4"><strong>Teléfono:</strong> 644 106 222</p>
+            <h3 className="text-lg font-semibold text-brand mb-2">3. Principios del Tratamiento según RODO</h3>
+            <ul className="list-disc pl-6 space-y-1 mb-4">
+              <li><strong>Licitud, lealtad y transparencia</strong></li>
+              <li><strong>Limitación de la finalidad</strong></li>
+              <li><strong>Minimización de datos</strong></li>
+              <li><strong>Exactitud</strong></li>
+              <li><strong>Limitación del plazo de conservación</strong></li>
+              <li><strong>Integridad y confidencialidad</strong></li>
+              <li><strong>Responsabilidad proactiva</strong></li>
+            </ul>
+            <h3 className="text-lg font-semibold text-brand mb-2">4. Derechos del Interesado según RODO</h3>
+            <ul className="space-y-1 mb-4">
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-brand-accent mt-1 flex-shrink-0" /><span><strong>Derecho de acceso</strong></span></li>
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-brand-accent mt-1 flex-shrink-0" /><span><strong>Derecho de rectificación</strong></span></li>
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-brand-accent mt-1 flex-shrink-0" /><span><strong>Derecho de supresión (derecho al olvido)</strong></span></li>
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-brand-accent mt-1 flex-shrink-0" /><span><strong>Derecho a la limitación del tratamiento</strong></span></li>
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-brand-accent mt-1 flex-shrink-0" /><span><strong>Derecho a la portabilidad de los datos</strong></span></li>
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-brand-accent mt-1 flex-shrink-0" /><span><strong>Derecho de oposición</strong></span></li>
+              <li className="flex items-start gap-2"><Check className="w-4 h-4 text-brand-accent mt-1 flex-shrink-0" /><span><strong>Derecho a no ser objeto de decisiones individuales automatizadas</strong></span></li>
+            </ul>
+            <h3 className="text-lg font-semibold text-brand mb-2">5. ¿Cómo puede ejercer sus Derechos?</h3>
+            <p className="mb-4">Puede ejercer sus derechos enviando un escrito a <strong>Polska Grupa Konsultingowa</strong>, a la dirección postal <strong>Calle Matilde Peñaranda, 27, 03183 Torrevieja (Alicante), España</strong>, o a la dirección de correo electrónico <a href="mailto:info@pgkhiszpania.com" className="text-brand-accent hover:underline">info@pgkhiszpania.com</a>, adjuntando fotocopia de su DNI o documento identificativo equivalente.</p>
+            <h3 className="text-lg font-semibold text-brand mb-2">6. Derecho a presentar una Reclamación</h3>
+            <p>Si considera que el tratamiento de sus datos personales infringe la normativa, tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>.</p>
+            <p className="mt-4 text-sm text-slate-500">Última actualización: Enero 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function CookiesPage({ onBack }: { onBack: () => void }) {
+  return (
+    <div className="min-h-screen bg-white font-sans antialiased">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+        <button onClick={onBack} className="inline-flex items-center gap-2 text-brand-accent hover:text-brand transition-colors mb-8 text-sm font-medium">
+          <ArrowLeft className="w-4 h-4" /> Wróć do strony głównej
+        </button>
+        <h1 className="text-3xl sm:text-4xl font-bold text-brand mb-10">Política de Cookies / Polityka Cookies</h1>
+        <div className="space-y-8">
+          <div className="bg-slate-50 rounded-2xl p-8 sm:p-10">
+            <h2 className="text-xl font-bold text-brand mb-6">Textos para Banner de Cookies</h2>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-brand mb-3">Español (1ª capa)</h3>
+                <div className="bg-white rounded-lg p-4 border border-slate-200">
+                  <p className="text-slate-600 text-sm mb-3">Usamos cookies para el funcionamiento del sitio y, con tu consentimiento, para analizar el tráfico y personalizar.</p>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="px-3 py-1 border border-slate-300 rounded text-xs">Rechazar</span>
+                    <span className="px-3 py-1 bg-brand text-white rounded text-xs">Aceptar</span>
+                    <span className="px-3 py-1 border border-slate-300 rounded text-xs">Configurar</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-brand mb-3">Polski (1ª capa)</h3>
+                <div className="bg-white rounded-lg p-4 border border-slate-200">
+                  <p className="text-slate-600 text-sm mb-3">Używamy plików cookies, aby zapewnić działanie strony i – za Twoją zgodą – analizować ruch oraz personalizować treści.</p>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="px-3 py-1 border border-slate-300 rounded text-xs">Odrzuć</span>
+                    <span className="px-3 py-1 bg-brand text-white rounded text-xs">Akceptuj</span>
+                    <span className="px-3 py-1 border border-slate-300 rounded text-xs">Ustawienia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-8 sm:p-10 space-y-6 text-slate-700 leading-relaxed">
+            <h2 className="text-xl font-bold text-brand">Política de Cookies (ES)</h2>
+            <div>
+              <h3 className="font-semibold text-brand mb-2">¿Qué son las cookies?</h3>
+              <p>Ficheros depositados en el navegador para funcionamiento, métricas y (con consentimiento) personalización.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-brand mb-2">Categorías</h3>
+              <ul className="list-disc pl-6 space-y-1">
+                <li><strong>Necesarias:</strong> Siempre activas para el funcionamiento básico</li>
+                <li><strong>Analíticas:</strong> Requieren consentimiento</li>
+                <li><strong>Publicidad/Personalización:</strong> Requieren consentimiento</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-brand mb-2">Banner conforme AEPD 2024/25</h3>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>"Aceptar" y "Rechazar" en el primer nivel</li>
+                <li>Enlace a "Configuración"</li>
+                <li>Sin casillas premarcadas</li>
+                <li>Sin cookie-walls sin alternativa</li>
+              </ul>
+            </div>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-8 sm:p-10 space-y-6 text-slate-700 leading-relaxed">
+            <h2 className="text-xl font-bold text-brand">Polityka Cookies (PL)</h2>
+            <div>
+              <h3 className="font-semibold text-brand mb-2">Co to są cookies</h3>
+              <p>Pliki zapisywane w przeglądarce, aby zapewnić działanie strony, analizę ruchu i – za zgodą – personalizację.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-brand mb-2">Rodzaje</h3>
+              <ul className="list-disc pl-6 space-y-1">
+                <li><strong>Niezbędne:</strong> Bez zgody (np. utrzymanie sesji, koszyk, bezpieczeństwo)</li>
+                <li><strong>Analityczne:</strong> Wymagana zgoda</li>
+                <li><strong>Reklamowe/personalizacyjne:</strong> Wymagana zgoda</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-brand mb-2">Baner zgody (zgodne z AEPD 2024/25)</h3>
+              <p>Musi mieć "Akceptuj" i "Odrzuć" na tym samym poziomie, link "Ustawienia" (druga warstwa), brak pre-zaznaczonych kategorii, i brak "cookie walls" bez alternatywy.</p>
+            </div>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-8 sm:p-10 text-slate-700">
+            <h2 className="text-xl font-bold text-brand mb-4">Tabla de Cookies / Tabela Cookies</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-slate-300">
+                    <th className="text-left py-2 pr-4 font-semibold text-brand">Kategoría</th>
+                    <th className="text-left py-2 pr-4 font-semibold text-brand">Nombre</th>
+                    <th className="text-left py-2 pr-4 font-semibold text-brand">Proveedor</th>
+                    <th className="text-left py-2 pr-4 font-semibold text-brand">Propósito</th>
+                    <th className="text-left py-2 pr-4 font-semibold text-brand">Duración</th>
+                    <th className="text-left py-2 font-semibold text-brand">Tipo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-2 pr-4">Necesarias</td>
+                    <td className="py-2 pr-4">__stripe_mid</td>
+                    <td className="py-2 pr-4">Stripe</td>
+                    <td className="py-2 pr-4">Procesamiento de pagos</td>
+                    <td className="py-2 pr-4">1 año</td>
+                    <td className="py-2">Terceros</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-2 pr-4">Analíticas</td>
+                    <td className="py-2 pr-4">_ga</td>
+                    <td className="py-2 pr-4">Google</td>
+                    <td className="py-2 pr-4">Estadísticas de tráfico</td>
+                    <td className="py-2 pr-4">13 meses</td>
+                    <td className="py-2">Terceros</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-2 pr-4">Funcionales</td>
+                    <td className="py-2 pr-4">lang_pref</td>
+                    <td className="py-2 pr-4">PGK</td>
+                    <td className="py-2 pr-4">Recordar idioma</td>
+                    <td className="py-2 pr-4">6 meses</td>
+                    <td className="py-2">Propias</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4 text-xs text-slate-400 italic">Nota: Los nombres y duraciones exactas se completarán después del análisis de las herramientas CMP utilizadas.</p>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-8 sm:p-10 text-slate-700">
+            <h2 className="text-xl font-bold text-brand mb-4">Gestión de Cookies / Zarządzanie Cookies</h2>
+            <h3 className="font-semibold text-brand mb-3">Cómo gestionar cookies por navegador:</h3>
+            <ul className="list-disc pl-6 space-y-1">
+              <li><strong>Chrome:</strong> Configuración &gt; Privacidad y seguridad &gt; Cookies</li>
+              <li><strong>Firefox:</strong> Preferencias &gt; Privacidad y seguridad &gt; Cookies</li>
+              <li><strong>Safari:</strong> Preferencias &gt; Privacidad &gt; Cookies</li>
+              <li><strong>Edge:</strong> Configuración &gt; Privacidad &gt; Cookies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeFaqCat, setActiveFaqCat] = useState(0)
+  const [activeLegalPage, setActiveLegalPage] = useState<LegalPage>(null)
+
+  const openLegalPage = (page: LegalPage) => {
+    setActiveLegalPage(page)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const closeLegalPage = () => {
+    setActiveLegalPage(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const navItems = [
     { label: 'Co to NRUA?', href: '#co-to' },
@@ -270,6 +583,69 @@ function App() {
     { num: '03', title: 'Wypełnij Formularz', desc: 'Uruchom aplikację N2, wybierz "Nuevo depósito", rok 2025, wpisz dane właściciela, dane nieruchomości (CRU, NRUA), informacje o wynajmach.', icon: <CheckCircle2 className="w-7 h-7" /> },
     { num: '04', title: 'Złóż Elektronicznie lub Osobiście', desc: 'Elektronicznie: z certyfikatem cyfrowym na sede.registradores.org. Osobiście: wydrukuj formularz i zanieś do Registro de la Propiedad.', icon: <Shield className="w-7 h-7" /> },
   ]
+
+  if (activeLegalPage === 'privacy') {
+    return (
+      <div className="min-h-screen bg-white font-sans antialiased">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="flex items-center justify-between h-20">
+              <button onClick={closeLegalPage} className="flex items-center gap-2">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <circle cx="14" cy="14" r="13" stroke="var(--brand)" strokeWidth="2" />
+                  <circle cx="14" cy="14" r="6" fill="var(--brand)" />
+                </svg>
+                <span className="text-lg font-semibold tracking-tight text-brand">NRUA Hiszpania</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <PrivacyPage onBack={closeLegalPage} />
+      </div>
+    )
+  }
+
+  if (activeLegalPage === 'terms') {
+    return (
+      <div className="min-h-screen bg-white font-sans antialiased">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="flex items-center justify-between h-20">
+              <button onClick={closeLegalPage} className="flex items-center gap-2">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <circle cx="14" cy="14" r="13" stroke="var(--brand)" strokeWidth="2" />
+                  <circle cx="14" cy="14" r="6" fill="var(--brand)" />
+                </svg>
+                <span className="text-lg font-semibold tracking-tight text-brand">NRUA Hiszpania</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <TermsPage onBack={closeLegalPage} />
+      </div>
+    )
+  }
+
+  if (activeLegalPage === 'cookies') {
+    return (
+      <div className="min-h-screen bg-white font-sans antialiased">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="flex items-center justify-between h-20">
+              <button onClick={closeLegalPage} className="flex items-center gap-2">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <circle cx="14" cy="14" r="13" stroke="var(--brand)" strokeWidth="2" />
+                  <circle cx="14" cy="14" r="6" fill="var(--brand)" />
+                </svg>
+                <span className="text-lg font-semibold tracking-tight text-brand">NRUA Hiszpania</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <CookiesPage onBack={closeLegalPage} />
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-white font-sans antialiased">
@@ -712,6 +1088,32 @@ function App() {
         </div>
       </section>
 
+      <section className="py-20 sm:py-24 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-10 tracking-tight">Gdzie nas znaleźć</h2>
+          </FadeIn>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[
+              { title: 'PGK w Hiszpanii', url: 'https://www.pgkhiszpania.com/', icon: <Globe className="w-5 h-5" /> },
+              { title: 'Biznes w Hiszpanii', url: 'https://www.bizneswhiszpanii.com/', icon: <ExternalLink className="w-5 h-5" /> },
+              { title: 'YouTube', url: 'https://www.youtube.com/@BizneswHiszpanii', icon: <Youtube className="w-5 h-5" /> },
+              { title: 'TikTok', url: 'https://www.tiktok.com/@bizneswhiszpanii', icon: <ExternalLink className="w-5 h-5" /> },
+              { title: 'Rejestracja w Hiszpanii', url: 'https://www.rejestracjahiszpania.com/', icon: <Globe className="w-5 h-5" /> },
+            ].map((link, i) => (
+              <FadeIn key={i} delay={i * 80}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-white rounded-lg p-5 hover:shadow-lg transition-all group border border-slate-200">
+                  <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
+                    {link.icon}
+                  </div>
+                  <span className="font-medium text-brand group-hover:text-brand-light transition-colors text-sm">{link.title}</span>
+                </a>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="kontakt" className="py-24 sm:py-32 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 gap-16">
@@ -728,7 +1130,7 @@ function App() {
                   <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white flex-shrink-0"><Mail className="w-5 h-5" /></div>
                   <div>
                     <p className="font-bold text-brand">Email</p>
-                    <p className="text-slate-600">kontakt@nruahiszpania.pl</p>
+                    <a href="mailto:info@pgkhiszpania.com" className="text-slate-600 hover:text-brand-accent transition-colors">info@pgkhiszpania.com</a>
                     <p className="text-slate-400 text-sm">Odpowiadamy w 24h</p>
                   </div>
                 </div>
@@ -736,7 +1138,7 @@ function App() {
                   <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white flex-shrink-0"><Phone className="w-5 h-5" /></div>
                   <div>
                     <p className="font-bold text-brand">Telefon</p>
-                    <p className="text-slate-600">+34 600 000 000</p>
+                    <a href="tel:+34644106222" className="text-slate-600 hover:text-brand-accent transition-colors">644 106 222</a>
                     <p className="text-slate-400 text-sm">Pon-Pt 9:00-18:00</p>
                   </div>
                 </div>
@@ -744,8 +1146,8 @@ function App() {
                   <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white flex-shrink-0"><MapPin className="w-5 h-5" /></div>
                   <div>
                     <p className="font-bold text-brand">Lokalizacja</p>
-                    <p className="text-slate-600">Hiszpania</p>
-                    <p className="text-slate-400 text-sm">Obsługujemy całą Hiszpanię</p>
+                    <p className="text-slate-600">Calle Matilde Peñaranda, 27</p>
+                    <p className="text-slate-600">03183 Torrevieja (Alicante), España</p>
                   </div>
                 </div>
               </div>
@@ -758,10 +1160,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 sm:py-20">
           <div className="mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
-              Informacje o NRUA<br />dla polskich właścicieli
+              Polska Grupa Konsultingowa S.L.
             </h2>
+            <p className="text-white/50 mt-2">Profesjonalna obsługa podatkowa dla właścicieli nieruchomości w Hiszpanii</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
               <h4 className="text-white font-medium mb-4 text-sm tracking-wider uppercase">Nawigacja</h4>
               <ul className="space-y-3">
@@ -773,29 +1176,48 @@ function App() {
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-medium mb-4 text-sm tracking-wider uppercase">Kontakt</h4>
-              <ul className="space-y-3 text-sm">
-                <li>kontakt@nruahiszpania.pl</li>
-                <li>+34 600 000 000</li>
+              <h4 className="text-white font-medium mb-4 text-sm tracking-wider uppercase">Legal</h4>
+              <ul className="space-y-3">
+                <li><button onClick={() => openLegalPage('privacy')} className="text-sm hover:text-white transition-colors text-left">Privacidad / Prywatność</button></li>
+                <li><button onClick={() => openLegalPage('terms')} className="text-sm hover:text-white transition-colors text-left">Aviso Legal / Nota Prawna</button></li>
+                <li><button onClick={() => openLegalPage('cookies')} className="text-sm hover:text-white transition-colors text-left">Cookies / Polityka Cookies</button></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-medium mb-4 text-sm tracking-wider uppercase">Linki zewnętrzne</h4>
+              <h4 className="text-white font-medium mb-4 text-sm tracking-wider uppercase">Kontakt</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="mailto:info@pgkhiszpania.com" className="hover:text-white transition-colors">info@pgkhiszpania.com</a></li>
+                <li>644 106 222</li>
+                <li>Torrevieja (Alicante), España</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-medium mb-4 text-sm tracking-wider uppercase">Gdzie nas znaleźć</h4>
               <ul className="space-y-3">
-                <li><a href="https://sede.registradores.org" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">Sede Registradores</a></li>
-                <li><a href="https://www.boe.es" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">BOE (Real Decreto)</a></li>
+                <li><a href="https://www.pgkhiszpania.com/" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">PGK w Hiszpanii</a></li>
+                <li><a href="https://www.bizneswhiszpanii.com/" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">Biznes w Hiszpanii</a></li>
+                <li><a href="https://www.youtube.com/@BizneswHiszpanii" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">YouTube</a></li>
+                <li><a href="https://www.tiktok.com/@bizneswhiszpanii" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">TikTok</a></li>
+                <li><a href="https://www.rejestracjahiszpania.com/" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">Rejestracja w Hiszpanii</a></li>
               </ul>
             </div>
           </div>
-          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
-                <circle cx="14" cy="14" r="13" stroke="currentColor" strokeWidth="2" />
-                <circle cx="14" cy="14" r="6" fill="currentColor" />
-              </svg>
-              <span className="text-sm text-white/40">NRUA Hiszpania &copy; {new Date().getFullYear()}. Portal informacyjny.</span>
+          <div className="pt-8 border-t border-white/10 space-y-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-2">
+                <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+                  <circle cx="14" cy="14" r="13" stroke="currentColor" strokeWidth="2" />
+                  <circle cx="14" cy="14" r="6" fill="currentColor" />
+                </svg>
+                <span className="text-sm text-white/40">&copy; {new Date().getFullYear()} Polska Grupa Konsultingowa SL. Wszelkie prawa zastrzeżone.</span>
+              </div>
+              <a href="https://www.boe.es/borme/dias/2025/08/07/pdfs/BORME-C-2025-5909.pdf" target="_blank" rel="noopener noreferrer" className="text-xs text-white/40 hover:text-white/60 transition-colors underline">Sprawdź nasz rejestr</a>
             </div>
-            <p className="text-xs text-white/30">Informacje zawarte na tej stronie mają charakter wyłącznie informacyjny i nie stanowią porady prawnej. Procedury oparte są na Real Decreto 1312/2024 i Orden VAU/1560/2025. W przypadku skomplikowanych spraw zalecamy konsultację z profesjonalną gestorią lub prawnikiem w Hiszpanii.</p>
+            <div className="bg-white/5 rounded-lg p-4">
+              <h4 className="text-white/60 font-medium text-xs mb-2">Ważna Informacja Prawna:</h4>
+              <p className="text-xs text-white/30 leading-relaxed">Stwierdzenia zawarte na tej stronie internetowej dotyczące ochrony podatkowej, braku błędów i skutków wobec administracji lub sądów należy rozumieć w ramach prawnych ograniczeń wiążących interpretacji podatkowych: ich skuteczność zależy od braku istotnych zmian w stanie faktycznym, obowiązujących przepisach lub interpretacji administracyjnej i nie wykluczają one sankcji w przypadku zatajenia, oszustwa lub innych sytuacji uregulowanych prawem. Dla każdej konkretnej sytuacji zalecamy skonsultowanie się z profesjonalną opinią i obowiązującymi przepisami.</p>
+            </div>
+            <p className="text-xs text-white/20">Servicio fiscal profesional / Profesjonalna obsługa podatkowa</p>
           </div>
         </div>
       </footer>
