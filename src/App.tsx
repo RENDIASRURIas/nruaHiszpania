@@ -208,6 +208,25 @@ function App() {
 
   const faqCategories: FAQCategory[] = [
     {
+      title: 'Obowiązek i NRA',
+      icon: <Shield className="w-5 h-5" />,
+      items: [
+        { q: 'Kto dokładnie ma obowiązek posiadać numer NRUA?', a: 'Zgodnie z art. 5 ust. a) Dekretu Królewskiego 1312/2024, obowiązek ten dotyczy każdej osoby (prywatnej lub firmy), która oferuje zakwaterowanie krótkoterminowe za wynagrodzeniem przez platformy takie jak Airbnb, Booking.com czy social media. Dotyczy to nie tylko turystyki, ale też najmu dla pracowników, studentów czy osób na leczeniu.' },
+        { q: 'Kiedy muszę uzyskać ten numer?', a: 'Prawo jest jasne: numer NRUA musisz uzyskać ZANIM opublikujesz ogłoszenie w internecie. Od 1 lipca 2025 r. platformy mają zakaz wyświetlania ofert, które nie posiadają zweryfikowanego i aktywnego numeru w systemie.' },
+        { q: 'Mam już numer licencji turystycznej z mojego regionu (np. numer VFT lub VT). Czy to wystarczy?', a: 'Nie. Licencja regionalna (autonomiczna) jest warunkiem koniecznym, aby ubiegać się o NRUA, ale go nie zastępuje. NRUA to ogólnokrajowy numer rejestrowy wpisany do Księgi Wieczystej nieruchomości (Registro de la Propiedad), który pozwala na wymianę danych z Unią Europejską.' },
+        { q: 'Czy jeśli wynajmuję mieszkanie prywatnie, bez portali, też muszę mieć NRUA?', a: 'Obowiązek posiadania NRUA dotyczy usług świadczonych za pośrednictwem „platform internetowych". Jeśli jednak reklamujesz się w jakikolwiek sposób cyfrowy (nawet na grupach Facebook), podpadasz pod definicję platformy i musisz posiadać numer, aby działać legalnie i uniknąć kar.' },
+        { q: 'Co jeśli mam pokój w domu, w którym sam mieszkam?', a: 'Tak, wynajem pokoi (jeśli pozwalają na to przepisy Twojego regionu) również wymaga numeru NRUA, jeśli ogłaszasz go jako najem krótkoterminowy.' },
+      ],
+    },
+    {
+      title: 'Dane i Dokumenty (Rejestracja)',
+      icon: <FileText className="w-5 h-5" />,
+      items: [
+        { q: 'Jakie dokumenty są potrzebne do uzyskania numeru?', a: 'Przy składaniu wniosku musisz posiadać: hiszpański numer NIE lub NIF, kod CRU nieruchomości (z Nota Simple), tytuł prawny do wynajmu (np. licencję turystyczną lub potwierdzenie zgłoszenia działalności w gminie/regionie) oraz informację o kategorii najmu (turystyczny lub sezonowy/inny).' },
+        { q: 'Czy raz nadany numer NRUA jest bezterminowy?', a: 'Numer pozostaje ważny tak długo, jak długo spełniasz wymogi i składasz coroczne sprawozdanie w lutym. Brak raportu rocznego lub zmiana przeznaczenia nieruchomości bez aktualizacji danych może doprowadzić do natychmiastowego wycofania numeru z rejestru.' },
+      ],
+    },
+    {
       title: 'Obowiązek i Terminy',
       icon: <Calendar className="w-5 h-5" />,
       items: [
