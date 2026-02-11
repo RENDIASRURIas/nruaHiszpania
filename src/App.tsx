@@ -371,7 +371,7 @@ function App() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <FadeIn>
             <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-brand leading-snug tracking-tight">
-              Od 2026 roku każdy właściciel nieruchomości z numerem NRUA musi co roku składać roczne zgłoszenie wynajmu do Registro de la Propiedad. Brak zgłoszenia oznacza automatyczne cofnięcie numeru rejestracyjnego.
+              Od 2026 roku każdy właściciel nieruchomości z numerem NRUA ma obowiązek składać coroczną deklarację wynajmu w hiszpańskim Registro de la Propiedad. Pamiętaj, że musisz to zrobić w lutym. Brak zgłoszenia oznacza automatyczne unieważnienie Twojego numeru i usunięcie ogłoszeń z platform takich jak Airbnb czy Booking.
             </p>
           </FadeIn>
           <FadeIn delay={200}>
