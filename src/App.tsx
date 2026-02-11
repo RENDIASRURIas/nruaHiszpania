@@ -211,80 +211,36 @@ function App() {
       title: 'Obowiązek i Terminy',
       icon: <Calendar className="w-5 h-5" />,
       items: [
-        { q: 'Jaki jest dokładny termin złożenia zgłoszenia?', a: 'Od 1 lutego do 28 lutego 2026 włącznie. To są daty nieprzekraczalne ustalone przez Real Decreto 1312/2024.' },
-        { q: 'Co jeśli złożę 1 marca (dzień po terminie)?', a: 'Rejestr rozpocznie procedurę cofnięcia NRUA. Nie ma przedłużenia ani "okresu karencji". System jest automatyczny.' },
-        { q: 'Czy mogę złożyć wcześniej, np. w styczniu?', a: 'Nie. Aplikacja N2 i Rejestr przyjmują zgłoszenia tylko w lutym.' },
-        { q: 'Czy to jest obowiązek jednorazowy czy powtarzający się?', a: 'Powtarzający się co roku. Każdego lutego musisz zgłosić wynajmy z poprzedniego roku.' },
-        { q: 'Czy są jakieś wyjątki od tego obowiązku?', a: 'Nie. Każdy z NRUA musi zgłosić, nawet jeśli nie wynajmował (wtedy "sin actividad" - brak aktywności).' },
-        { q: 'Czy gmina może przedłużyć termin?', a: 'Nie. To obowiązek państwowy (Real Decreto), gminy nie mają wpływu na terminy.' },
-        { q: 'Otrzymam powiadomienie email że muszę zgłosić?', a: 'Prawdopodobnie NIE. Rejestr nie wysyła przypomnień. To Twój obowiązek śledzić termin.' },
-        { q: 'Co jeśli jestem chory w lutym?', a: 'Możesz upoważnić pełnomocnika (gestoría, rodzina) do złożenia za Ciebie. Wymaga to pisemnego pełnomocnictwa.' },
-        { q: 'Czy muszę zgłosić jeśli mieszkanie było puste cały 2025?', a: 'TAK. Musisz zgłosić zaznaczając "sin actividad" (brak wynajmu). To potwierdza że NRUA jest aktywny.' },
-        { q: 'Czy mogę poprosić o odroczenie terminu?', a: 'Nie. Termin jest sztywny dla wszystkich. Jedynym wyjściem jest złożenie w wymaganym okresie lub udzielenie pełnomocnictwa.' },
+        { q: 'Kiedy dokładnie muszę wysłać raport roczny?', a: 'Zgodnie z rozporządzeniem VAU/1560/2025, raport należy złożyć wyłącznie w lutym każdego roku. Przykładowo, dane za rok 2025 przesyłasz w lutym 2026 r.' },
+        { q: 'Czy muszę mieć NRUA, jeśli wynajmuję mieszkanie tylko przez miesiąc w roku?', a: 'Tak. Ustawa (Art. 2.c RD 1312/2024) mówi, że obowiązek dotyczy każdego wynajmu krótkoterminowego, niezależnie od tego, czy jest on regularny, czy okazjonalny.' },
+        { q: 'Mam licencję turystyczną od lat. Czy to to samo co NRUA?', a: 'Nie. Licencja turystyczna jest regionalna. NRUA to nowy, ogólnokrajowy numer rejestrowy niezbędny do publikowania ogłoszeń w sieci. Licencja jest wymogiem, aby w ogóle móc ubiegać się o NRUA.' },
       ],
     },
     {
       title: 'Dokumenty i Dane',
       icon: <FileText className="w-5 h-5" />,
       items: [
-        { q: 'Nie pamiętam swojego numeru NRUA. Gdzie go znaleźć?', a: 'Sprawdź: dokument od Urzędu Gminy, ogłoszenie na Airbnb/Booking (musi być tam widoczny), lub zapytaj w Urzędzie Gminy gdzie rejestrowałeś.' },
-        { q: 'Co to jest CRU i gdzie go znaleźć?', a: 'CRU (Código Registral Único) to kod nieruchomości w Rejestrze Własności. Znajdziesz w: dokumencie NRUA, escritura (akt notarialny) lub nota simple (wypis z Rejestru).' },
-        { q: 'Nie mam certyfikatu cyfrowego. Czy mogę złożyć?', a: 'TAK. Możesz złożyć osobiście w Rejestrze Własności lub zlecić profesjonaliście który posiada certyfikat.' },
-        { q: 'Czy potrzebuję kopii umów najmu?', a: 'Nie. Wystarczają: daty, liczba gości, cel najmu. Umowy zachowaj dla siebie (na wypadek kontroli).' },
-        { q: 'Wynajmowałem 20 razy w 2025. Muszę każdy wypisać?', a: 'TAK, ale aplikacja N2 pozwala zgrupować. Wpisz datę pierwszego i ostatniego wynajmu w roku oraz łączną liczbę gości.' },
-        { q: 'Nie pamiętam dokładnych dat wynajmów. Co robić?', a: 'Sprawdź: wyciągi bankowe (wpłaty od Airbnb/Booking), kalendarz Airbnb (zakładka "Rezerwacje"), panel Booking (Historia), emaile potwierdzające rezerwacje.' },
-        { q: 'Czy muszę podać dane gości (imiona, nazwiska)?', a: 'NIE. Zgłoszenie jest anonimowe. Podajesz tylko: liczbę osób, daty, cel.' },
-        { q: 'Mam nieruchomość w spółce (SL). Jakie dane podać?', a: 'NIF spółki, nazwa spółki, administrator lub osoba upoważniona, email kontaktowy spółki.' },
-        { q: 'Czy mogę zgłosić kilka nieruchomości jednym formularzem?', a: 'Nie. Każdy CRU (nieruchomość) wymaga osobnego zgłoszenia.' },
-        { q: 'Straciłem dokument z NRUA. Mogę uzyskać duplikat?', a: 'TAK. Zwróć się do Urzędu Gminy który wydał NRUA. Poproś o "certificado duplicado NRUA".' },
+        { q: 'Jakich danych o gościach wymaga system?', a: 'System wymaga listy pobytów, w której podajesz: datę przyjazdu, datę wyjazdu, liczbę gości oraz cel pobytu (np. turystyka, praca). Dane są przesyłane w formacie anonimowym.' },
+        { q: 'Co to jest numer CRU i gdzie go znajdę?', a: 'CRU (Código Registral Único) to „PESEL" Twojej nieruchomości w rejestrze gruntów. Znajdziesz go w swojej karcie własności (Nota Simple). Jest niezbędny do poprawnej identyfikacji nieruchomości w systemie NRUA.' },
+        { q: 'Nie wynajmowałem mieszkania w tym roku. Czy mogę pominąć zgłoszenie?', a: 'Absolutnie nie. Musisz złożyć raport z zaznaczoną opcją „Sin actividad" (brak aktywności). Jeśli tego nie zrobisz, Twój numer NRUA może zostać wyrejestrowany.' },
       ],
     },
     {
-      title: 'Proces i Aplikacja N2',
+      title: 'Proces i Aplikacja',
       icon: <BookOpen className="w-5 h-5" />,
       items: [
-        { q: 'Czy aplikacja N2 jest w języku polskim?', a: 'Nie. Jest po hiszpańsku i angielsku. Dlatego przygotowaliśmy manual w języku polskim.' },
-        { q: 'Aplikacja N2 nie chce się zainstalować. Co robić?', a: 'Sprawdź: czy masz Javę zainstalowaną (java.com), pobierz ponownie z oficjalnej strony, lub spróbuj na innym komputerze. Napisz do nas - pomożemy.' },
-        { q: 'Czy mogę wypełnić formularz na telefonie?', a: 'Nie. Aplikacja N2 działa tylko na komputerze (Windows/Mac). Nie ma wersji mobilnej.' },
-        { q: 'Ile czasu zajmuje wypełnienie formularza?', a: 'Z przygotowanymi danymi: 20-30 minut. Bez przygotowania: 1-2 godziny (szukanie dat, liczenie gości).' },
-        { q: 'Czy mogę zapisać formularz i wrócić później?', a: 'TAK. Aplikacja N2 pozwala zapisać rozpracowywany formularz i dokończyć później.' },
-        { q: 'Popełniłem błąd w zgłoszeniu. Czy mogę poprawić?', a: 'TAK, ale tylko jeśli jeszcze nie wysłałeś. Po wysłaniu musisz złożyć "rectificación" (poprawkę).' },
-        { q: 'Jak wygląda potwierdzenie odbioru?', a: 'PDF z: numerem rejestrowym zgłoszenia, data i godzina złożenia, pieczęć elektroniczna Rejestru, Twoje dane i NRUA.' },
-        { q: 'Ile czeka się na potwierdzenie?', a: 'Elektroniczne: 24-48 godzin. Osobiste: natychmiast (pieczęć na dokumencie).' },
-        { q: 'Rejestr odrzucił moje zgłoszenie. Co robić?', a: 'Sprawdź powód odrzucenia (powinien być w emailu). Najczęstsze: błędny CRU, NRUA niezgodny z bazą, brakujące dane. Popraw i złóż ponownie.' },
-        { q: 'Czy mogę złożyć zgłoszenie za kogoś (rodzina, znajomy)?', a: 'TAK, jeśli masz pisemne pełnomocnictwo od właściciela.' },
+        { q: 'Czy mogę wysłać raport w formie PDF lub e-mailem?', a: 'Nie. Oficjalnym formatem jest XBRL (specyfikacja 2.1). Jest to format cyfrowy czytelny dla maszyn, przesyłany przez platformę elektroniczną Kolegium Rejestratorów.' },
+        { q: 'Ile kosztuje złożenie raportu rocznego?', a: 'Aktualna opłata rejestrowa wynosi 27,05 € za każde zgłoszenie (za każdy numer NRUA).' },
+        { q: 'Czy muszę osobiście jechać do Hiszpanii, aby to załatwić?', a: 'Nie. Cały proces odbywa się online. Możesz upoważnić pełnomocnika lub gestorię, która wyśle raport w Twoim imieniu.' },
       ],
     },
     {
       title: 'Konsekwencje i Kary',
       icon: <AlertTriangle className="w-5 h-5" />,
       items: [
-        { q: 'Co DOKŁADNIE się stanie jeśli nie złożę?', a: 'Rejestr Własności cofnie NRUA (automatycznie), informacja trafi do Ventanilla Única Digital, Airbnb/Booking zablokują Twoje ogłoszenie, nie będziesz mógł legalnie wynajmować, możliwe kary gminne (300-3000€).' },
-        { q: 'Czy będę mógł odzyskać NRUA po cofnięciu?', a: 'TAK, ale musisz przejść cały proces od nowa (jak przy pierwszej rejestracji). To kosztuje czas i pieniądze.' },
-        { q: 'Airbnb już mi zablokował ogłoszenie. Co robić?', a: 'Złóż zgłoszenie NATYCHMIAST, uzyskaj potwierdzenie, wyślij do Airbnb jako dowód. Czekaj na odblokowanie (może zająć 7-14 dni).' },
-        { q: 'Czy Urząd Skarbowy też zostanie poinformowany?', a: 'Nie bezpośrednio. To są dwa niezależne systemy. Ale Hacienda może uzyskać dostęp do danych.' },
-        { q: 'Czy mogę dostać karę pieniężną oprócz cofnięcia NRUA?', a: 'TAK. Gminy mogą nałożyć kary za: brak zgłoszenia (300-1500€), wynajmowanie bez NRUA (1000-3000€), powtarzające się naruszenie (do 6000€).' },
-        { q: 'Czy kara jest taka sama w całej Hiszpanii?', a: 'Nie. Każda Wspólnota Autonomiczna ma swoje stawki. Najsurowsze: Katalonia, Baleary.' },
-        { q: 'Jak długo trwa cofnięcie NRUA?', a: 'Po terminie 28 lutego Rejestr ma 30 dni na wysłanie ostrzeżenia. Potem kolejne 15 dni na cofnięcie. Razem ok. 45-60 dni.' },
-        { q: 'Otrzymam ostrzeżenie przed cofnięciem?', a: 'Prawdopodobnie TAK, ale nie zawsze. Rejestr powinien wysłać "requerimiento" (wezwanie), ale terminy są krótkie.' },
-        { q: 'Czy mogę odwołać się od cofnięcia NRUA?', a: 'TAK, ale tylko jeśli masz uzasadniony powód (np. błąd Rejestru, siła wyższa). Termin: 15 dni od powiadomienia.' },
-        { q: 'Czy ktoś już stracił NRUA za brak zgłoszenia?', a: 'To pierwszy rok tego obowiązku (2026), więc przypadków jeszcze nie ma. Ale prawo jest jasne - będzie egzekwowane.' },
-      ],
-    },
-    {
-      title: 'Przypadki Szczególne',
-      icon: <Users className="w-5 h-5" />,
-      items: [
-        { q: 'Sprzedałem mieszkanie w lipcu 2025. Kto zgłasza?', a: 'TY: wynajmy styczeń-lipiec 2025. NOWY WŁAŚCICIEL: wynajmy sierpień-grudzień 2025. Każdy za swój okres.' },
-        { q: 'Kupiłem mieszkanie z NRUA. Przechodzi na mnie?', a: 'TAK. NRUA jest związany z nieruchomością. Ale musisz zaktualizować dane właściciela w Urzędzie Gminy.' },
-        { q: 'Wynajmuję mieszkanie mojej matki. Kto zgłasza?', a: 'Właściciel (matka) lub osoba z pełnomocnictwem. Potrzebne: dokument pełnomocnictwa notarialny.' },
-        { q: 'Mam współwłaścicieli (50/50). Kto zgłasza?', a: 'Jeden ze współwłaścicieli w imieniu wszystkich. Lub każdy osobno (ale wtedy duplikacja - lepiej jeden).' },
-        { q: 'NRUA jest na spółkę, ale ja wynajmuję prywatnie. Co robić?', a: 'NRUA musi być zgodny z właścicielem w Rejestrze. Jeśli spółka jest właścicielem - zgłasza spółka.' },
-        { q: 'Mam kilka NRUA dla jednego mieszkania (różne pokoje). Ile zgłoszeń?', a: 'Jeśli wszystkie NRUA mają ten sam CRU - jedno zgłoszenie (lista wszystkich NRUA w jednym formularzu).' },
-        { q: 'Czy gestoría może to zrobić za mnie?', a: 'TAK. Większość gestorías oferuje tę usługę. Możesz też skontaktować się z nami.' },
-        { q: 'Wynajmuję przez Airbnb. Oni nie zgłaszają za mnie?', a: 'NIE. Airbnb/Booking tylko udostępniają platformę. Obowiązek prawny leży po stronie właściciela.' },
-        { q: 'Jestem rezydentem podatkowym w Polsce. Czy to dotyczy mnie?', a: 'TAK. Obowiązek dotyczy wszystkich właścicieli z NRUA, niezależnie od rezydencji podatkowej.' },
-        { q: 'Gdzie mogę uzyskać pomoc jeśli mam problem?', a: 'Nasz email: kontakt@nruahiszpania.pl (odpowiadamy w 24h). Możesz też zwrócić się do Rejestru Własności lub Urzędu Gminy który wydał NRUA.' },
+        { q: 'Co się stanie, jeśli zapomnę o raporcie w lutym?', a: 'Rejestrator (Registrador de la Propiedad) może zawiesić ważność Twojego numeru NRUA. W efekcie Airbnb, Booking i inne platformy otrzymają nakaz usunięcia Twojego ogłoszenia w ciągu 48 godzin (Art. 10.2 RD 1312/2024).' },
+        { q: 'Jakie kary finansowe grożą za brak NRUA?', a: 'Sam dekret NRUA odsyła do istniejących przepisów regionalnych. W zależności od regionu (np. Walencja, Andaluzja), kary za nielegalny wynajem lub brak wymaganych rejestracji mogą sięgać nawet 600.000 € w przypadku bardzo poważnych naruszeń.' },
+        { q: 'Czy Airbnb samo prześle moje dane do rejestru?', a: 'Platformy przesyłają dane o aktywności (liczba nocy/gości), ale to Ty jako właściciel masz prawny obowiązek posiadania aktywnego numeru NRUA i składania corocznego modelu informacyjnego w rejestrze.' },
       ],
     },
   ]
@@ -653,16 +609,19 @@ function App() {
         <div className="absolute top-8 right-8 w-28 h-28 dot-grid hidden lg:block" />
       </section>
 
-      <section id="faq" className="py-24 sm:py-32 bg-white">
+      <section id="faq" className="py-24 sm:py-32 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand mb-4 tracking-tight">Najczęściej zadawane pytania</h2>
-            <p className="text-lg text-slate-500 mb-12 max-w-2xl">50 pytań i odpowiedzi dotyczących obowiązku NRUA, pogrupowanych tematycznie.</p>
+            <div className="text-center mb-16">
+              <p className="text-brand-accent text-sm font-medium tracking-wider uppercase mb-3">FAQ</p>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand mb-4 tracking-tight">Najczęściej zadawane pytania</h2>
+              <p className="text-lg text-slate-500 max-w-2xl mx-auto">Odpowiedzi na najważniejsze pytania dotyczące obowiązku NRUA, pogrupowane tematycznie.</p>
+            </div>
           </FadeIn>
           <FadeIn delay={100}>
-            <div className="flex flex-wrap gap-2 mb-12">
+            <div className="flex flex-wrap justify-center gap-3 mb-14">
               {faqCategories.map((cat, i) => (
-                <button key={i} onClick={() => setActiveFaqCat(i)} className={`flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-medium transition-all ${activeFaqCat === i ? 'bg-brand text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                <button key={i} onClick={() => setActiveFaqCat(i)} className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all border ${activeFaqCat === i ? 'bg-brand text-white border-brand shadow-lg shadow-brand/20' : 'bg-white text-slate-600 border-slate-200 hover:border-brand hover:text-brand'}`}>
                   {cat.icon}
                   {cat.title}
                 </button>
@@ -670,7 +629,13 @@ function App() {
             </div>
           </FadeIn>
           <FadeIn delay={200}>
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sm:p-10">
+              <div className="flex items-center gap-3 mb-8 pb-6 border-b border-slate-100">
+                <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white">
+                  {faqCategories[activeFaqCat].icon}
+                </div>
+                <h3 className="text-xl font-bold text-brand">{faqCategories[activeFaqCat].title}</h3>
+              </div>
               <FAQAccordion category={faqCategories[activeFaqCat]} />
             </div>
           </FadeIn>
@@ -811,7 +776,7 @@ function App() {
               </svg>
               <span className="text-sm text-white/40">NRUA Hiszpania &copy; {new Date().getFullYear()}. Portal informacyjny.</span>
             </div>
-            <p className="text-xs text-white/30">Informacje na stronie nie stanowią porady prawnej. Skonsultuj się z profesjonalistą.</p>
+            <p className="text-xs text-white/30">Informacje zawarte na tej stronie mają charakter wyłącznie informacyjny i nie stanowią porady prawnej. Procedury oparte są na Real Decreto 1312/2024 i Orden VAU/1560/2025. W przypadku skomplikowanych spraw zalecamy konsultację z profesjonalną gestorią lub prawnikiem w Hiszpanii.</p>
           </div>
         </div>
       </footer>
