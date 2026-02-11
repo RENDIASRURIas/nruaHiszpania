@@ -605,21 +605,22 @@ function App() {
       <section className="bg-brand relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 sm:py-28">
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 tracking-tight">Ważne ostrzeżenia</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 tracking-tight">Ważne ostrzeżenia</h2>
+            <p className="text-white/60 mb-10 text-lg">Przeczytaj koniecznie!</p>
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'Airbnb i Booking BĘDĄ blokować ogłoszenia bez aktualnego zgłoszenia NRUA.',
-              'Nie ma znaczenia, czy wynajmowałeś przez platformę, czy prywatnie - obowiązek dotyczy WSZYSTKICH.',
-              'Nawet jeśli Twoje mieszkanie stało puste cały rok, MUSISZ zgłosić "brak aktywności".',
-              'Złożenie po terminie NIE gwarantuje uniknięcia konsekwencji.',
-              'Każda nieruchomość (CRU) wymaga OSOBNEGO zgłoszenia.',
-              'Gestoría lub pełnomocnik mogą złożyć zgłoszenie za Ciebie - nie musisz jechać do Hiszpanii.',
+              { title: 'Airbnb i Booking będą blokować ogłoszenia', desc: 'Platformy mają obowiązek usunąć Twoją ofertę w ciągu 48h, jeśli Twój numer NRUA zostanie zawieszony z powodu braku rocznego zgłoszenia.' },
+              { title: 'Reklamujesz się w sieci? Musisz mieć NRUA', desc: 'Jeśli Twoja oferta widnieje na jakiejkolwiek platformie internetowej, masz obowiązek posiadać aktywny numer i składać raporty.' },
+              { title: 'Mieszkanie puste? Też musisz wysłać raport', desc: 'Jeśli nieruchomość nie była wynajmowana, musisz zaznaczyć opcję „Sin actividad", aby zachować ważność numeru w rejestrze.' },
+              { title: 'Luty to termin ostateczny', desc: 'Złożenie raportu po 28 lutego może nie uchronić Cię przed zablokowaniem ogłoszeń przez systemy automatyczne.' },
+              { title: 'Jedno zgłoszenie na jeden CRU', desc: 'Jeśli masz dwa mieszkania (dwa numery CRU), musisz wysłać dwa osobne formularze.' },
+              { title: 'Nie musisz być w Hiszpanii', desc: 'Cały proces odbywa się cyfrowo. Twój pełnomocnik lub gestoría może złożyć raport w Twoim imieniu przez system XBRL.' },
             ].map((warning, i) => (
               <FadeIn key={i} delay={i * 80}>
-                <div className="flex items-start gap-3">
-                  <AlertTriangle className="w-5 h-5 text-amber-400 mt-1 flex-shrink-0" />
-                  <p className="text-white/80 text-base leading-relaxed">{warning}</p>
+                <div className="bg-white/10 rounded-lg p-6">
+                  <h3 className="text-white font-bold mb-2">{warning.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{warning.desc}</p>
                 </div>
               </FadeIn>
             ))}
