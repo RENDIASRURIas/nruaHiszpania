@@ -1093,9 +1093,10 @@ function App() {
           <FadeIn>
             <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-10 tracking-tight">Gdzie nas znaleźć</h2>
           </FadeIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { title: 'PGK w Hiszpanii', url: 'https://www.pgkhiszpania.com/', icon: <Globe className="w-5 h-5" /> },
+              { title: 'Podatki w Hiszpanii', url: 'https://www.podatkihiszpania.com/', icon: <Globe className="w-5 h-5" /> },
               { title: 'Biznes w Hiszpanii', url: 'https://www.bizneswhiszpanii.com/', icon: <ExternalLink className="w-5 h-5" /> },
               { title: 'YouTube', url: 'https://www.youtube.com/@BizneswHiszpanii', icon: <Youtube className="w-5 h-5" /> },
               { title: 'TikTok', url: 'https://www.tiktok.com/@bizneswhiszpanii', icon: <ExternalLink className="w-5 h-5" /> },
@@ -1139,7 +1140,7 @@ function App() {
                   <div>
                     <p className="font-bold text-brand">Telefon</p>
                     <a href="tel:+34644106222" className="text-slate-600 hover:text-brand-accent transition-colors">644 106 222</a>
-                    <p className="text-slate-400 text-sm">Pon-Pt 9:00-18:00</p>
+                    <p className="text-slate-400 text-sm">Pon-Pt 12:00-18:00</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -1195,6 +1196,7 @@ function App() {
               <h4 className="text-white font-medium mb-4 text-sm tracking-wider uppercase">Gdzie nas znaleźć</h4>
               <ul className="space-y-3">
                 <li><a href="https://www.pgkhiszpania.com/" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">PGK w Hiszpanii</a></li>
+                <li><a href="https://www.podatkihiszpania.com/" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">Podatki w Hiszpanii</a></li>
                 <li><a href="https://www.bizneswhiszpanii.com/" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">Biznes w Hiszpanii</a></li>
                 <li><a href="https://www.youtube.com/@BizneswHiszpanii" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">YouTube</a></li>
                 <li><a href="https://www.tiktok.com/@bizneswhiszpanii" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">TikTok</a></li>
