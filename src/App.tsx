@@ -383,6 +383,41 @@ function App() {
         </div>
       </section>
 
+      <section className="py-20 sm:py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-4 tracking-tight">Dokumenty do pobrania</h2>
+            <p className="text-slate-500 mb-10 max-w-2xl">Oficjalne instrukcje przetłumaczone na język polski. Pobierz i zachowaj na swoim urządzeniu.</p>
+          </FadeIn>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <FadeIn>
+              <a href="/docs/instrukcja-n2.pdf" download className="flex items-center gap-5 bg-white rounded-lg p-6 hover:shadow-lg transition-all group border border-slate-200">
+                <div className="w-14 h-14 rounded-lg bg-brand flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <Download className="w-6 h-6" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-brand group-hover:text-brand-light transition-colors mb-1">Instrukcja instalacji i tworzenia depozytów czynszowych w aplikacji N2</h3>
+                  <p className="text-slate-400 text-sm">PDF — Instrukcja krok po kroku</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-brand-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </FadeIn>
+            <FadeIn delay={100}>
+              <a href="/docs/podrecznik-depozyt.pdf" download className="flex items-center gap-5 bg-white rounded-lg p-6 hover:shadow-lg transition-all group border border-slate-200">
+                <div className="w-14 h-14 rounded-lg bg-brand flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <Download className="w-6 h-6" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-brand group-hover:text-brand-light transition-colors mb-1">Podręcznik wprowadzający — Depozyt z tytułu najmu</h3>
+                  <p className="text-slate-400 text-sm">PDF — Przewodnik po depozycie</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-brand-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       <section id="co-to" className="py-24 sm:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="absolute top-0 left-0 w-20 h-20 dot-grid hidden lg:block" />
@@ -664,41 +699,6 @@ function App() {
                 </a>
               </FadeIn>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 sm:py-24 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-brand mb-4 tracking-tight">Dokumenty do pobrania</h2>
-            <p className="text-slate-500 mb-10 max-w-2xl">Oficjalne instrukcje przetłumaczone na język polski. Pobierz i zachowaj na swoim urządzeniu.</p>
-          </FadeIn>
-          <div className="grid sm:grid-cols-2 gap-6">
-            <FadeIn>
-              <a href="/docs/instrukcja-n2.pdf" download className="flex items-center gap-5 bg-white rounded-lg p-6 hover:shadow-lg transition-all group border border-slate-200">
-                <div className="w-14 h-14 rounded-lg bg-brand flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
-                  <Download className="w-6 h-6" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-brand group-hover:text-brand-light transition-colors mb-1">Instrukcja instalacji i tworzenia depozytów czynszowych w aplikacji N2</h3>
-                  <p className="text-slate-400 text-sm">PDF — Instrukcja krok po kroku</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-brand-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </FadeIn>
-            <FadeIn delay={100}>
-              <a href="/docs/podrecznik-depozyt.pdf" download className="flex items-center gap-5 bg-white rounded-lg p-6 hover:shadow-lg transition-all group border border-slate-200">
-                <div className="w-14 h-14 rounded-lg bg-brand flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
-                  <Download className="w-6 h-6" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-brand group-hover:text-brand-light transition-colors mb-1">Podręcznik wprowadzający — Depozyt z tytułu najmu</h3>
-                  <p className="text-slate-400 text-sm">PDF — Przewodnik po depozycie</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-brand-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </FadeIn>
           </div>
         </div>
       </section>
