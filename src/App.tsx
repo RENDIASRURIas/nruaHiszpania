@@ -395,23 +395,25 @@ function App() {
               <div className="bg-slate-50 rounded-lg p-8 sm:p-10 h-full relative group hover:bg-slate-100 transition-colors">
                 <div className="absolute top-6 right-6 w-3 h-3 rounded-full bg-brand-accent" />
                 <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Czym jest NRUA?</h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  NRUA (Número de Registro Único de Arrendamiento) to unikalny numer rejestracyjny przypisany do nieruchomości przeznaczonej na wynajem krótkoterminowy w Hiszpanii.
-                </p>
                 <p className="text-slate-600 leading-relaxed">
-                  Obowiązek rocznego zgłoszenia wynika z Real Decreto 1312/2024, który wszedł w życie 23 grudnia 2024.
+                  NRUA (Número de Registro Único de Arrendamientos) to unikalny numer przypisany do Twojej nieruchomości w hiszpańskim rejestrze. Jest on niezbędny, abyś mógł legalnie reklamować swój wynajem w internecie. Obowiązek posiadania numeru oraz składania raportów wynika z dekretu Real Decreto 1312/2024, który obowiązuje od 2 stycznia 2025 roku.
                 </p>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
               <div className="bg-slate-50 rounded-lg p-8 sm:p-10 h-full relative group hover:bg-slate-100 transition-colors">
                 <div className="absolute top-6 right-6 w-3 h-3 rounded-full bg-brand-accent" />
-                <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Model Informacyjny</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-brand mb-3">Model Informacyjny (Zgłoszenie roczne)</h3>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  Co roku w lutym musisz złożyć formularz z danymi o wszystkich wynajmach z poprzedniego roku: daty, liczba gości, cel najmu.
+                  Każdy właściciel z numerem NRUA musi raz w roku, wyłącznie w lutym, złożyć sprawozdanie za rok poprzedni. W formularzu podaje się:
                 </p>
-                <p className="text-slate-600 leading-relaxed">
-                  Nawet jeśli NIE wynajmowałeś - musisz zgłosić &quot;brak aktywności&quot; (sin actividad). To potwierdza że NRUA jest aktywny.
+                <ul className="space-y-2 text-slate-600 mb-4">
+                  <li className="flex items-start gap-2"><span className="text-brand-accent mt-1">•</span>Daty zameldowania i wymeldowania gości.</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-accent mt-1">•</span>Liczbę osób przebywających w nieruchomości.</li>
+                  <li className="flex items-start gap-2"><span className="text-brand-accent mt-1">•</span>Cel najmu (np. turystyczny, praca, studia).</li>
+                </ul>
+                <p className="text-slate-600 leading-relaxed font-medium">
+                  Ważne: Brak wynajmu też trzeba zgłosić! Nawet jeśli w danym roku Twoja nieruchomość stała pusta, masz obowiązek wysłać zgłoszenie z zaznaczoną opcją &quot;Sin actividad&quot; (brak aktywności). Tylko w ten sposób zachowasz ważność swojego numeru NRUA i unikniesz jego wyrejestrowania.
                 </p>
               </div>
             </FadeIn>
