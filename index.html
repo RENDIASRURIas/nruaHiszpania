@@ -2,10 +2,16 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="NRUA Hiszpania - Obowiazkowe roczne zgloszenie najmu dla polskich wlascicieli nieruchomosci w Hiszpanii. Termin: 1 lutego - 2 marca 2026." />
     <title>NRUA Hiszpania - Obowiazkowe Roczne Zgloszenie Najmu 2026</title>
+    <script>
+      if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https:' + location.href.substring(location.protocol.length));
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
